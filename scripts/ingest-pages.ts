@@ -8,12 +8,16 @@
  *   npx tsx scripts/ingest-pages.ts --force (re-index all)
  */
 
+import { config } from 'dotenv';
 import { createClient } from '@supabase/supabase-js';
 import { createHash } from 'crypto';
 import * as cheerio from 'cheerio';
 
+// Load environment variables
+config({ path: '.env.local' });
+
 // Configuration
-const SITE_URL = process.env.RAG_SITE_URL || 'https://www.penleyoil.com';
+const SITE_URL = process.env.RAG_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
