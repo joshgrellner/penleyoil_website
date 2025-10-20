@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import PageViewTracker from "@/components/PageViewTracker";
 import { SITE_CONFIG } from "@/lib/config";
 
 const inter = Inter({
@@ -66,6 +67,9 @@ export default function RootLayout({
             />
           </noscript>
         )}
+
+        {/* PageView Tracker - analytics: verified */}
+        <PageViewTracker />
 
         <Header />
         <main>{children}</main>
