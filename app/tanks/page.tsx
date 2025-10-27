@@ -113,105 +113,134 @@ export default function TanksPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center text-[--penley-green]">Tank Options</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Above-Ground Tanks */}
+
+            <div className="bg-blue-50 border-2 border-blue-200 p-6 rounded-lg mb-12 text-center">
+              <p className="text-xl text-gray-900">
+                <strong>Fuel Delivery Service:</strong> We can fill <span className="text-[--penley-green] font-bold">any size tank</span> you have on-site!
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Single Wall Tanks */}
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-[--penley-green] rounded-full flex items-center justify-center mb-6">
-                  <span className="text-3xl">⬆️</span>
+                  <span className="text-3xl">⚪</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Above-Ground Tanks</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Single Wall Tanks</h3>
                 <p className="text-gray-800 mb-6">
-                  Above-ground storage tanks (ASTs) offer flexibility, easier maintenance, and lower
-                  installation costs. Perfect for most commercial and industrial applications.
+                  Cost-effective fuel storage solution for above-ground installations.
                 </p>
-                <h4 className="font-bold mb-3 text-gray-900">Benefits:</h4>
-                <ul className="space-y-2 text-gray-800 mb-6">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Lower installation costs</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Easier inspections and maintenance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Visual monitoring capability</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Portable and relocatable</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Faster installation</span>
-                  </li>
-                </ul>
                 <h4 className="font-bold mb-3 text-gray-900">Available Sizes:</h4>
                 <ul className="space-y-2 text-gray-800">
                   <li className="flex items-start gap-2">
                     <span className="text-[--penley-green] font-bold">•</span>
-                    <span>500 - 1,000 gallons (Small operations)</span>
+                    <span>500 gallons</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[--penley-green] font-bold">•</span>
-                    <span>1,000 - 5,000 gallons (Medium operations)</span>
+                    <span>1,000 gallons</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[--penley-green] font-bold">•</span>
-                    <span>5,000 - 20,000 gallons (Large facilities)</span>
+                    <span>2,000 gallons</span>
                   </li>
                 </ul>
               </div>
 
-              {/* Below-Ground Tanks */}
+              {/* Double Wall Tanks */}
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-[--penley-green] rounded-full flex items-center justify-center mb-6">
-                  <span className="text-3xl">⬇️</span>
+                  <span className="text-3xl">⚪⚪</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Below-Ground Tanks</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Double Wall Tanks</h3>
                 <p className="text-gray-800 mb-6">
-                  Underground storage tanks (USTs) maximize space, protect fuel from weather, and provide
-                  a clean, professional appearance for your facility.
+                  Enhanced protection with built-in secondary containment for maximum safety.
                 </p>
-                <h4 className="font-bold mb-3 text-gray-900">Benefits:</h4>
-                <ul className="space-y-2 text-gray-800 mb-6">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Saves valuable ground space</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Protected from weather extremes</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Clean, professional appearance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Temperature-stable fuel storage</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Reduced fire risk</span>
-                  </li>
-                </ul>
                 <h4 className="font-bold mb-3 text-gray-900">Available Sizes:</h4>
                 <ul className="space-y-2 text-gray-800">
                   <li className="flex items-start gap-2">
                     <span className="text-[--penley-green] font-bold">•</span>
-                    <span>2,000 - 5,000 gallons (Small facilities)</span>
+                    <span>500 gallons</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[--penley-green] font-bold">•</span>
-                    <span>5,000 - 12,000 gallons (Medium facilities)</span>
+                    <span>1,000 gallons</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[--penley-green] font-bold">•</span>
-                    <span>12,000+ gallons (Large facilities)</span>
+                    <span>2,000 gallons</span>
                   </li>
                 </ul>
+              </div>
+
+              {/* Cube Tanks */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="w-16 h-16 bg-[--penley-green] rounded-full flex items-center justify-center mb-6">
+                  <span className="text-3xl">📦</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Cube Tanks</h3>
+                <p className="text-gray-800 mb-6">
+                  Compact, portable fuel storage ideal for remote locations and temporary sites.
+                </p>
+                <h4 className="font-bold mb-3 text-gray-900">Available Sizes:</h4>
+                <ul className="space-y-2 text-gray-800">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--penley-green] font-bold">•</span>
+                    <span>500 gallons</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--penley-green] font-bold">•</span>
+                    <span>1,000 gallons</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold mb-6 text-center text-[--penley-green]">Tank Features & Benefits</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-bold mb-3 text-gray-900">Single Wall Benefits:</h4>
+                  <ul className="space-y-2 text-gray-800">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Lower initial cost</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Faster installation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Easier maintenance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Portable and relocatable</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold mb-3 text-gray-900">Double Wall Benefits:</h4>
+                  <ul className="space-y-2 text-gray-800">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Built-in secondary containment</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Enhanced environmental protection</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>Leak detection capability</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span>May reduce insurance costs</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

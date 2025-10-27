@@ -147,10 +147,10 @@ export const SERVICES = {
     options: [
       { type: 'Single Wall', sizes: ['500 gal', '1,000 gal', '2,000 gal'], use: 'Standard fuel storage' },
       { type: 'Double Wall', sizes: ['500 gal', '1,000 gal', '2,000 gal'], use: 'Enhanced environmental protection' },
-      { type: 'Stationary', sizes: ['500-2,000 gal'], use: 'Permanent on-site installation' },
-      { type: 'Portable/Mobile', sizes: ['500-1,000 gal'], use: 'Flexible jobsite fueling' },
+      { type: 'Cube Tanks', sizes: ['500 gal', '1,000 gal'], use: 'Compact, portable fuel storage for remote locations' },
       { type: 'DEF Tanks', sizes: ['Various'], use: 'Dedicated DEF storage systems' }
     ],
+    fillService: 'We can fill any size tank you have on-site',
     rental: {
       terms: 'Short-term and long-term rentals available',
       pricing: 'Free tank rental with minimum fuel purchase commitment',
