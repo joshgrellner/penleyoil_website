@@ -344,7 +344,7 @@ export default function HomePage() {
                 href={`/service-areas/${city.name.toLowerCase().replace(/\s+/g, '-')}-${city.state.toLowerCase()}`}
                 className="bg-white border-2 border-gray-200 p-4 rounded-lg hover:border-[--penley-green] transition-colors text-center"
               >
-                <h3 className="font-bold">{city.name}, {city.state}</h3>
+                <h3 className="font-bold text-gray-900">{city.name}, {city.state}</h3>
               </Link>
             ))}
           </div>
