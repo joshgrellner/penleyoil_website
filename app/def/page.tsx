@@ -69,9 +69,20 @@ export default function DEFPage() {
       <SchemaMarkup schema={schema} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[--penley-green-dark] to-[--penley-green] text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative text-white py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/def/def-hero.jpg"
+            alt="Blue DEF pump sign at fueling station during sunset - Diesel Exhaust Fluid supply"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl">
             <div className="inline-block bg-[--penley-gold]/20 px-6 py-2 rounded-full mb-6">
               <span className="text-[--penley-gold] font-bold text-sm tracking-wider">ISO 22241 CERTIFIED</span>
             </div>

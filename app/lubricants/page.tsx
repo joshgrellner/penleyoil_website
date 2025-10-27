@@ -43,8 +43,8 @@ export default function LubricantsPage() {
       <section className="relative text-white py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/lubes/lubes-shelf-1.jpg"
-            alt="Industrial lubricants including motor oil, hydraulic fluid, gear oil, and grease on warehouse shelf"
+            src="/images/lubes/lubes-hero.jpg"
+            alt="Mechanic pouring golden motor oil into vehicle engine at Penley Oil lubricants service"
             fill
             priority
             className="object-cover"
