@@ -305,7 +305,7 @@ export default function HomePage() {
                 className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
               >
                 <div className="text-4xl mb-3">{industry.icon}</div>
-                <h3 className="font-bold text-lg mb-2">{industry.name}</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">{industry.name}</h3>
                 <p className="text-sm text-gray-800">{industry.description.substring(0, 80)}...</p>
               </Link>
             ))}
