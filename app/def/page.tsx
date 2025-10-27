@@ -32,7 +32,7 @@ const defFAQs = [
   },
   {
     question: 'Is your DEF certified and tested?',
-    answer: 'Yes, all our DEF is ISO 22241 and API certified. We conduct regular quality testing and store DEF in climate-controlled conditions to prevent contamination and degradation. We follow strict handling procedures to ensure every gallon meets or exceeds specifications.'
+    answer: 'Yes, all our DEF is ISO 22241 and API certified. We conduct regular quality testing and maintain rapid inventory turnover to ensure freshness. We follow strict handling procedures to ensure every gallon meets or exceeds specifications.'
   },
   {
     question: 'Where do you deliver DEF?',
@@ -40,7 +40,7 @@ const defFAQs = [
   },
   {
     question: 'Can you set up a DEF storage tank at our facility?',
-    answer: 'Yes, we can help you install on-site DEF storage tanks ranging from 500 to 5,000 gallons, complete with dispensing pumps and automated monitoring systems. This is ideal for high-volume fleet operations and allows you to fuel your equipment on-demand. Contact us at (405) 235-7553 to discuss your DEF storage needs.'
+    answer: 'We can provide and set up DEF totes (275-330 gallons) at your facility. For larger DEF storage tank systems, we can put you in contact with qualified installers who specialize in bulk DEF tank installations. Contact us at (405) 235-7553 to discuss your DEF storage needs.'
   },
   {
     question: 'How should I store DEF properly?',
@@ -264,7 +264,7 @@ export default function DEFPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
-                    <span>Stored in climate-controlled conditions</span>
+                    <span>Rapid inventory turnover ensures freshness</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
@@ -288,27 +288,25 @@ export default function DEFPage() {
             <h2 className="text-4xl font-bold mb-12 text-center text-[--penley-green]">DEF Storage Solutions</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Bulk DEF Tanks</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">DEF Storage Options</h3>
                 <p className="text-gray-800 mb-4">
-                  We can help you set up on-site DEF storage tanks with dispensing systems. Perfect for
-                  high-volume users who want the convenience of on-demand DEF access.
+                  <strong>DEF Totes (We Install):</strong> We provide and set up 275-330 gallon DEF totes at your facility - perfect for most fleet operations.
+                </p>
+                <p className="text-gray-800 mb-4">
+                  <strong>Larger DEF Tank Systems:</strong> For bulk DEF storage tanks (500+ gallons), we can connect you with qualified installers who specialize in large-scale DEF systems.
                 </p>
                 <ul className="space-y-3 text-gray-800">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
-                    <span>500-5,000 gallon capacity options</span>
+                    <span>Direct tote installation and setup</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
-                    <span>Above-ground and below-ground tanks</span>
+                    <span>Referrals for larger tank installations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
-                    <span>Automated monitoring and reordering</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Dispensing pumps and nozzles</span>
+                    <span>DEF delivery and monitoring</span>
                   </li>
                 </ul>
               </div>
