@@ -119,7 +119,7 @@ export default function FuelDeliveryPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center text-[--penley-green]">Available Fuel Types</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-[--penley-green] rounded-full flex items-center justify-center mb-4">
                   <span className="text-3xl">⛽</span>
@@ -147,6 +147,16 @@ export default function FuelDeliveryPage() {
                 <h3 className="text-xl font-bold mb-2 text-gray-900">Dyed Diesel</h3>
                 <p className="text-gray-800">
                   Tax-exempt off-road diesel for agriculture and construction
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <div className="w-16 h-16 bg-[--penley-green] rounded-full flex items-center justify-center mb-4">
+                  <span className="text-3xl">🏮</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">Kerosene</h3>
+                <p className="text-gray-800">
+                  K-1 kerosene for heaters, generators, and equipment
                 </p>
               </div>
 

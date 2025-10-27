@@ -75,19 +75,26 @@ export default function LubricantsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8 text-[--penley-green]">Trusted Brands You Know</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Phillips 66</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Phillips 66</h3>
                 <p className="text-gray-800 text-lg">
                   Industry-leading lubricants trusted by professionals worldwide. Premium performance
                   for demanding applications.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Mystik</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Mystik</h3>
                 <p className="text-gray-800 text-lg">
                   High-quality lubricants at competitive prices. Proven performance for everyday
                   equipment and vehicle needs.
+                </p>
+              </div>
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">VP Racing</h3>
+                <p className="text-gray-800 text-lg">
+                  Premium racing and performance lubricants. Engineered for extreme conditions
+                  and maximum protection.
                 </p>
               </div>
             </div>
@@ -106,9 +113,9 @@ export default function LubricantsPage() {
                 <div className="w-16 h-16 bg-[--penley-green] rounded-full flex items-center justify-center mb-4">
                   <span className="text-3xl">🚗</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Motor Oils</h3>
+                <h3 className="text-xl font-bold mb-3 text-[--penley-green]">Motor Oils</h3>
                 <p className="text-gray-800 mb-4">
-                  Conventional, synthetic blend, and full synthetic motor oils for gasoline and diesel engines.
+                  Conventional, synthetic blend, and full synthetic motor oils for gasoline and diesel engines. Includes heavy duty engine oils for commercial fleets and equipment.
                 </p>
                 <ul className="space-y-2 text-gray-800 text-sm">
                   <li className="flex items-start gap-2">
@@ -117,7 +124,11 @@ export default function LubricantsPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
-                    <span>15W-40 diesel engine oil</span>
+                    <span>15W-40 heavy duty diesel oil</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 font-bold">✓</span>
+                    <span>Heavy duty engine oils for fleets</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
