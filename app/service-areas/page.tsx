@@ -49,7 +49,7 @@ export default function ServiceAreasPage() {
               <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">Oklahoma City Metro</h3>
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
-                  <ul className="space-y-2 text-gray-800">
+                  <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
                       <span>Oklahoma City</span>
@@ -73,7 +73,7 @@ export default function ServiceAreasPage() {
                   </ul>
                 </div>
                 <div>
-                  <ul className="space-y-2 text-gray-800">
+                  <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
                       <span>Yukon</span>
@@ -97,7 +97,7 @@ export default function ServiceAreasPage() {
                   </ul>
                 </div>
                 <div>
-                  <ul className="space-y-2 text-gray-800">
+                  <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
                       <span>Warr Acres</span>
@@ -148,7 +148,7 @@ export default function ServiceAreasPage() {
                 <h3 className="text-xl font-bold mb-4 text-gray-900 flex items-center gap-2">
                   <span className="text-2xl">⬆️</span> North of OKC
                 </h3>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Guthrie</span>
@@ -177,7 +177,7 @@ export default function ServiceAreasPage() {
                 <h3 className="text-xl font-bold mb-4 text-gray-900 flex items-center gap-2">
                   <span className="text-2xl">⬇️</span> South of OKC
                 </h3>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Purcell</span>
@@ -206,7 +206,7 @@ export default function ServiceAreasPage() {
                 <h3 className="text-xl font-bold mb-4 text-gray-900 flex items-center gap-2">
                   <span className="text-2xl">➡️</span> East of OKC
                 </h3>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Shawnee</span>
@@ -235,7 +235,7 @@ export default function ServiceAreasPage() {
                 <h3 className="text-xl font-bold mb-4 text-gray-900 flex items-center gap-2">
                   <span className="text-2xl">⬅️</span> West of OKC
                 </h3>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>El Reno</span>
@@ -284,7 +284,7 @@ export default function ServiceAreasPage() {
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div>
                   <h4 className="font-bold mb-2 text-gray-900">Diesel & Gasoline:</h4>
-                  <ul className="space-y-2 text-gray-800">
+                  <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
                       <span>500+ gallons (within 50 miles)</span>
@@ -301,7 +301,7 @@ export default function ServiceAreasPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-2 text-gray-900">DEF (Diesel Exhaust Fluid):</h4>
-                  <ul className="space-y-2 text-gray-800">
+                  <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
                       <span>250+ gallons (within 50 miles)</span>
@@ -334,7 +334,7 @@ export default function ServiceAreasPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Primary Zone</h3>
                 <p className="text-gray-800 text-center mb-4">Within 30 miles of OKC</p>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Next-day standard delivery</span>
@@ -360,7 +360,7 @@ export default function ServiceAreasPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Extended Zone</h3>
                 <p className="text-gray-800 text-center mb-4">30-100 miles from OKC</p>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>1-2 day delivery</span>
@@ -386,7 +386,7 @@ export default function ServiceAreasPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Statewide Zone</h3>
                 <p className="text-gray-800 text-center mb-4">100+ miles from OKC</p>
-                <ul className="space-y-2 text-gray-800">
+                <ul className="space-y-2 text-gray-900">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Scheduled bulk delivery</span>
