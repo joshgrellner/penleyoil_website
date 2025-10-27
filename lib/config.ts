@@ -159,9 +159,9 @@ export const SERVICES = {
     services: [
       'Tank sales and rentals',
       'Delivery and installation',
-      'Compliance and safety consultation',
       'Maintenance and service',
-      'Tank removal and disposal'
+      'Tank monitoring systems',
+      'Fuel delivery to your tanks'
     ]
   }
 } as const;

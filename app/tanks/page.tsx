@@ -154,7 +154,7 @@ export default function TanksPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Double Wall Tanks</h3>
                 <p className="text-gray-800 mb-6">
-                  Enhanced protection with built-in secondary containment for maximum safety.
+                  Built-in secondary containment for customers who need enhanced environmental protection.
                 </p>
                 <h4 className="font-bold mb-3 text-gray-900">Available Sizes:</h4>
                 <ul className="space-y-2 text-gray-800">
@@ -180,7 +180,7 @@ export default function TanksPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-[--penley-green]">Cube Tanks</h3>
                 <p className="text-gray-800 mb-6">
-                  Compact, portable fuel storage ideal for remote locations and temporary sites.
+                  Compact, portable, and lockable fuel storage ideal for remote locations and temporary sites.
                 </p>
                 <h4 className="font-bold mb-3 text-gray-900">Available Sizes:</h4>
                 <ul className="space-y-2 text-gray-800">
@@ -198,6 +198,13 @@ export default function TanksPage() {
 
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-6 text-center text-[--penley-green]">Tank Features & Benefits</h3>
+
+              <div className="bg-green-50 border-2 border-green-200 p-4 rounded-lg mb-6 text-center">
+                <p className="text-lg text-gray-900">
+                  <strong>All tanks include fuel filters</strong> to protect your equipment
+                </p>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-bold mb-3 text-gray-900">Single Wall Benefits:</h4>
@@ -345,21 +352,21 @@ export default function TanksPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-bold mb-3 text-gray-900">Filtration Systems</h3>
+                <h3 className="text-lg font-bold mb-3 text-gray-900">Fuel Filters</h3>
                 <p className="text-gray-800">
-                  Fuel filters and water separators to protect your equipment
+                  Standard on all tanks to protect your equipment and ensure clean fuel delivery
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-lg font-bold mb-3 text-gray-900">Containment</h3>
                 <p className="text-gray-800">
-                  Spill containment systems and secondary containment solutions
+                  Spill containment systems and double-wall tanks for enhanced protection
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-bold mb-3 text-gray-900">Security Features</h3>
+                <h3 className="text-lg font-bold mb-3 text-gray-900">Lockable Cube Tanks</h3>
                 <p className="text-gray-800">
-                  Lockable caps, key systems, and access control for theft prevention
+                  Our 500 and 1,000 gallon cube tanks feature built-in locking mechanisms for security
                 </p>
               </div>
             </div>
@@ -391,10 +398,10 @@ export default function TanksPage() {
                   2
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">Permitting & Compliance</h3>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Tank Delivery & Setup</h3>
                   <p className="text-gray-800">
-                    We handle all necessary permits, environmental compliance paperwork, and regulatory
-                    requirements. Our team knows Oklahoma regulations inside and out.
+                    We deliver your tank to your prepared site and handle professional installation of the tank,
+                    pumping equipment, and monitoring systems. We test everything thoroughly before commissioning.
                   </p>
                 </div>
               </div>
@@ -402,32 +409,6 @@ export default function TanksPage() {
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-[--penley-green] rounded-full flex items-center justify-center text-white text-xl font-bold">
                   3
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">Site Preparation</h3>
-                  <p className="text-gray-800">
-                    We prepare the installation site, including excavation for underground tanks or pad
-                    construction for above-ground tanks, along with all necessary containment systems.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[--penley-green] rounded-full flex items-center justify-center text-white text-xl font-bold">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">Tank Installation</h3>
-                  <p className="text-gray-800">
-                    Professional installation of your tank, pumping equipment, monitoring systems, and all
-                    safety features. We test everything thoroughly before commissioning.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[--penley-green] rounded-full flex items-center justify-center text-white text-xl font-bold">
-                  5
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900">Training & Support</h3>
