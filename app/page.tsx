@@ -161,7 +161,7 @@ export default function HomePage() {
             {/* Fuel Delivery */}
             <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
               <h3 className="text-2xl font-bold mb-3">
-                <Link href="/fuel-delivery" className="hover:text-[--penley-green]">
+                <Link href="/fuel-delivery" className="text-[--penley-green] hover:text-[--penley-green-dark]">
                   Fuel Delivery
                 </Link>
               </h3>
@@ -182,7 +182,7 @@ export default function HomePage() {
             {/* DEF Supply */}
             <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
               <h3 className="text-2xl font-bold mb-3">
-                <Link href="/def" className="hover:text-[--penley-green]">
+                <Link href="/def" className="text-[--penley-green] hover:text-[--penley-green-dark]">
                   DEF Supply
                 </Link>
               </h3>
@@ -203,7 +203,7 @@ export default function HomePage() {
             {/* Lubricants */}
             <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
               <h3 className="text-2xl font-bold mb-3">
-                <Link href="/lubricants" className="hover:text-[--penley-green]">
+                <Link href="/lubricants" className="text-[--penley-green] hover:text-[--penley-green-dark]">
                   Lubricants & Fluids
                 </Link>
               </h3>
@@ -224,7 +224,7 @@ export default function HomePage() {
             {/* Additives */}
             <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
               <h3 className="text-2xl font-bold mb-3">
-                <Link href="/additives" className="hover:text-[--penley-green]">
+                <Link href="/additives" className="text-[--penley-green] hover:text-[--penley-green-dark]">
                   Fuel Additives
                 </Link>
               </h3>
@@ -245,7 +245,7 @@ export default function HomePage() {
             {/* Tanks */}
             <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
               <h3 className="text-2xl font-bold mb-3">
-                <Link href="/tanks" className="hover:text-[--penley-green]">
+                <Link href="/tanks" className="text-[--penley-green] hover:text-[--penley-green-dark]">
                   Tank Solutions
                 </Link>
               </h3>
@@ -266,7 +266,7 @@ export default function HomePage() {
             {/* Deliveries */}
             <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
               <h3 className="text-2xl font-bold mb-3">
-                <Link href="/deliveries" className="hover:text-[--penley-green]">
+                <Link href="/deliveries" className="text-[--penley-green] hover:text-[--penley-green-dark]">
                   Delivery Service
                 </Link>
               </h3>
@@ -305,7 +305,7 @@ export default function HomePage() {
                 className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
               >
                 <div className="text-4xl mb-3">{industry.icon}</div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">{industry.name}</h3>
+                <h3 className="font-bold text-lg mb-2 text-[--penley-green]">{industry.name}</h3>
                 <p className="text-sm text-gray-800">{industry.description.substring(0, 80)}...</p>
               </Link>
             ))}
@@ -375,7 +375,7 @@ export default function HomePage() {
             <div className="space-y-6">
               {homeFAQs.map((faq, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg mb-2">{faq.question}</h3>
+                  <h3 className="font-bold text-lg mb-2 text-[--penley-green]">{faq.question}</h3>
                   <p className="text-gray-700">{faq.answer}</p>
                 </div>
               ))}
