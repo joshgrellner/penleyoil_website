@@ -287,15 +287,11 @@ export default function ServiceAreasPage() {
                   <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
-                      <span>500+ gallons (within 50 miles)</span>
+                      <span>300 gallon minimum for all distances</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold">✓</span>
-                      <span>1,000+ gallons (50-100 miles)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold">✓</span>
-                      <span>2,000+ gallons (100+ miles)</span>
+                      <span className="text-gray-600 font-bold">•</span>
+                      <span className="text-gray-700 text-sm">Smaller quantities available with additional delivery charge</span>
                     </li>
                   </ul>
                 </div>
@@ -304,15 +300,11 @@ export default function ServiceAreasPage() {
                   <ul className="space-y-2 text-gray-900">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 font-bold">✓</span>
-                      <span>250+ gallons (within 50 miles)</span>
+                      <span>250 gallon minimum for all distances</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold">✓</span>
-                      <span>500+ gallons (50-100 miles)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold">✓</span>
-                      <span>1,000+ gallons (100+ miles)</span>
+                      <span className="text-gray-600 font-bold">•</span>
+                      <span className="text-gray-700 text-sm">Smaller quantities available with additional delivery charge</span>
                     </li>
                   </ul>
                 </div>
@@ -349,7 +341,7 @@ export default function ServiceAreasPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
-                    <span>No minimum order</span>
+                    <span>300 gal fuel / 250 gal DEF minimum</span>
                   </li>
                 </ul>
               </div>

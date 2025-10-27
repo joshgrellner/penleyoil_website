@@ -28,7 +28,7 @@ const deliveryFAQs = [
   },
   {
     question: 'What is the minimum delivery order?',
-    answer: 'Our minimum delivery order is typically 100 gallons for diesel and gasoline fuel. For DEF, we can accommodate smaller orders depending on packaging (jugs, drums, or totes). Contact us to discuss your specific needs.'
+    answer: 'Our standard minimum delivery is 300 gallons for diesel and gasoline fuel, and 250 gallons for bulk DEF. Smaller quantities can be delivered with an additional delivery charge. For packaged DEF (jugs, drums, or totes), we can accommodate smaller orders. Contact us to discuss your specific needs.'
   },
   {
     question: 'How do I schedule a fuel delivery?',

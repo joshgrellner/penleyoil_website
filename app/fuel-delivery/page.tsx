@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const fuelFAQs = [
   {
     question: 'How much does diesel fuel delivery cost in Oklahoma City?',
-    answer: 'Diesel delivery pricing depends on volume and delivery location. We offer competitive rates with volume discounts for regular customers. Minimum delivery is typically 100 gallons. Contact us at (405) 235-7553 for a custom quote based on your specific needs and location.'
+    answer: 'Diesel delivery pricing depends on volume and delivery location. We offer competitive rates with volume discounts for regular customers. Standard minimum delivery is 300 gallons, though smaller quantities can be delivered with an additional delivery charge. Contact us at (405) 235-7553 for a custom quote based on your specific needs and location.'
   },
   {
     question: 'Do you deliver diesel fuel on weekends in Oklahoma?',
@@ -54,7 +54,7 @@ const fuelFAQs = [
   },
   {
     question: 'What is the minimum order for bulk fuel delivery?',
-    answer: 'Our standard minimum delivery is 100 gallons for fuel delivery in the Oklahoma City metro area. Larger minimums may apply for deliveries outside the metro area. We offer flexible delivery options including one-time orders, scheduled deliveries, and automated refill programs.'
+    answer: 'Our standard minimum delivery is 300 gallons for fuel in the Oklahoma City metro area. Smaller quantities can be delivered with an additional delivery charge. We offer flexible delivery options including one-time orders, scheduled deliveries, and automated refill programs. Contact us to discuss your specific needs.'
   },
   {
     question: 'How quickly can you deliver fuel in an emergency?',
