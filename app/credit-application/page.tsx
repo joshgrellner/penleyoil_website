@@ -1,21 +1,19 @@
 import type { Metadata } from 'next';
 import { SITE_CONFIG } from '@/lib/config';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema';
+import { generatePageMetadata } from '@/lib/metadata';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import CreditAppWizard from '@/components/CreditAppWizard';
 
-export const metadata: Metadata = {
-  title: 'Credit Application | Penley Oil Company',
-  description: 'Apply for business credit with Penley Oil. Fast approval for fuel, DEF & lubricants. Convenient payment terms for Oklahoma companies. Apply now.',
-  openGraph: {
-    title: 'Credit Application | Penley Oil Company',
-    description: 'Apply for credit online. Fast review, convenient terms for Oklahoma businesses.',
-    url: `${SITE_CONFIG.url}/credit-application`,
-  },
-  alternates: {
-    canonical: `${SITE_CONFIG.url}/credit-application`
-  }
-};
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Commercial Credit Application | Penley Oil',
+  description: 'Apply for commercial terms with Penley Oil. Secure online form, document upload, and fast review.',
+  ogTitle: 'Apply for Business Credit in 5 Minutes',
+  ogDescription: 'Fast approval. Flexible terms. Convenient billing. Get approved online today.',
+  path: '/credit-application',
+  ogImage: 'credit-application.jpg',
+  keywords: ['business credit application', 'commercial fuel account', 'Oklahoma fuel credit']
+});
 
 const creditFAQs = [
   {

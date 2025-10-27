@@ -1,0 +1,291 @@
+{
+  "images": {
+    "home": [
+      {
+        "id": "home-hero-1",
+        "filename": "home-hero-1.jpg",
+        "webp": "home-hero-1.webp",
+        "alt": "Penley Oil fuel delivery bobtail truck refilling commercial fuel tank at Oklahoma construction site",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License (free for commercial use)"
+        },
+        "approved": false,
+        "searchQuery": "fuel bobtail truck on site fueling at construction yard at sunrise",
+        "usage": ["homepage-hero"],
+        "dimensions": {
+          "width": 2000,
+          "height": 1333
+        }
+      },
+      {
+        "id": "home-emergency-1",
+        "filename": "home-emergency-1.jpg",
+        "webp": "home-emergency-1.webp",
+        "alt": "Emergency fuel delivery truck responding to urgent call in Oklahoma City metro area",
+        "caption": "24/7 Emergency Fueling Available",
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "industrial fuel tank refill Oklahoma",
+        "usage": ["homepage-emergency-section"]
+      }
+    ],
+    "fuel": [
+      {
+        "id": "fuel-delivery-1",
+        "filename": "fuel-delivery-1.jpg",
+        "webp": "fuel-delivery-1.webp",
+        "alt": "Diesel fuel nozzle filling above-ground commercial fuel storage tank",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "diesel nozzle fueling aboveground tank closeup",
+        "usage": ["fuel-delivery-hero"]
+      },
+      {
+        "id": "fuel-fleet-1",
+        "filename": "fuel-fleet-1.jpg",
+        "webp": "fuel-fleet-1.webp",
+        "alt": "Commercial fleet yard with fuel storage and dispensing equipment",
+        "caption": null,
+        "credit": {
+          "source": "Pexels",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Pexels License"
+        },
+        "approved": false,
+        "searchQuery": "fleet yard fueling skid",
+        "usage": ["fuel-delivery-fleet-section"]
+      }
+    ],
+    "def": [
+      {
+        "id": "def-tote-1",
+        "filename": "def-tote-1.jpg",
+        "webp": "def-tote-1.webp",
+        "alt": "330-gallon DEF IBC tote with stainless steel coupler in clean warehouse",
+        "caption": "330-Gallon DEF Totes Available",
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "IBC tote DEF stainless coupler clean warehouse",
+        "usage": ["def-hero", "def-package-options"]
+      },
+      {
+        "id": "def-drums-1",
+        "filename": "def-drums-1.jpg",
+        "webp": "def-drums-1.webp",
+        "alt": "55-gallon DEF drums stacked in organized warehouse facility",
+        "caption": null,
+        "credit": {
+          "source": "Pexels",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Pexels License"
+        },
+        "approved": false,
+        "searchQuery": "DEF drums warehouse neat",
+        "usage": ["def-package-options"]
+      }
+    ],
+    "lubes": [
+      {
+        "id": "lubes-shelf-1",
+        "filename": "lubes-shelf-1.jpg",
+        "webp": "lubes-shelf-1.webp",
+        "alt": "Industrial lubricants including motor oil, hydraulic fluid, gear oil, and grease on warehouse shelf",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "industrial lubricants shelf motor hydraulic gear oil grease tubes warehouse",
+        "usage": ["lubricants-hero"]
+      }
+    ],
+    "additives": [
+      {
+        "id": "additives-bottles-1",
+        "filename": "additives-bottles-1.jpg",
+        "webp": "additives-bottles-1.webp",
+        "alt": "Diesel fuel additive bottles with no visible brand labels in engine bay",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "diesel additive bottles engine bay no brand label macro",
+        "usage": ["additives-hero"]
+      }
+    ],
+    "tanks": [
+      {
+        "id": "tanks-storage-1",
+        "filename": "tanks-storage-1.jpg",
+        "webp": "tanks-storage-1.webp",
+        "alt": "Commercial fuel storage tanks ranging from 500 to 2000 gallons in industrial yard",
+        "caption": null,
+        "credit": {
+          "source": "Pexels",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Pexels License"
+        },
+        "approved": false,
+        "searchQuery": "500 1000 2000 gallon aboveground fuel tanks stationary portable double wall yard",
+        "usage": ["tanks-hero"]
+      }
+    ],
+    "deliveries": [
+      {
+        "id": "deliveries-truck-1",
+        "filename": "deliveries-truck-1.jpg",
+        "webp": "deliveries-truck-1.webp",
+        "alt": "Fuel delivery truck entering industrial facility gate for scheduled delivery",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "truck cab perspective industrial gate delivery entrance",
+        "usage": ["deliveries-hero"]
+      }
+    ],
+    "industries": [
+      {
+        "id": "industries-construction-1",
+        "filename": "industries-construction-1.jpg",
+        "webp": "industries-construction-1.webp",
+        "alt": "Construction site fuel tank supplying heavy equipment at Oklahoma building project",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "construction site fuel tank",
+        "usage": ["industries-construction"]
+      },
+      {
+        "id": "industries-agriculture-1",
+        "filename": "industries-agriculture-1.jpg",
+        "webp": "industries-agriculture-1.webp",
+        "alt": "Tractor being fueled at Oklahoma farm with hay bales in background",
+        "caption": null,
+        "credit": {
+          "source": "Pexels",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Pexels License"
+        },
+        "approved": false,
+        "searchQuery": "tractor fueling agriculture hay bales",
+        "usage": ["industries-agriculture"]
+      },
+      {
+        "id": "industries-hospital-1",
+        "filename": "industries-hospital-1.jpg",
+        "webp": "industries-hospital-1.webp",
+        "alt": "Hospital emergency generator enclosure receiving fuel delivery for backup power",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "hospital generator enclosure fueling",
+        "usage": ["industries-healthcare"]
+      },
+      {
+        "id": "industries-municipal-1",
+        "filename": "industries-municipal-1.jpg",
+        "webp": "industries-municipal-1.webp",
+        "alt": "School bus yard with fueling station for municipal fleet vehicles",
+        "caption": null,
+        "credit": {
+          "source": "Pexels",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Pexels License"
+        },
+        "approved": false,
+        "searchQuery": "school bus yard fueling",
+        "usage": ["industries-municipal"]
+      },
+      {
+        "id": "industries-trucking-1",
+        "filename": "industries-trucking-1.jpg",
+        "webp": "industries-trucking-1.webp",
+        "alt": "Commercial trucking yard with fuel storage skid for fleet operations",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "trucking yard fueling skid",
+        "usage": ["industries-trucking"]
+      }
+    ],
+    "city": [
+      {
+        "id": "city-oklahoma-1",
+        "filename": "city-oklahoma-1.jpg",
+        "webp": "city-oklahoma-1.webp",
+        "alt": "Oklahoma industrial district at sunrise with commercial facilities",
+        "caption": null,
+        "credit": {
+          "source": "Unsplash",
+          "photographer": "TBD",
+          "url": "TBD",
+          "license": "Unsplash License"
+        },
+        "approved": false,
+        "searchQuery": "Oklahoma small city industrial district sunrise",
+        "usage": ["city-pages-hero"]
+      }
+    ]
+  },
+  "metadata": {
+    "lastUpdated": "2025-10-15T00:00:00Z",
+    "totalImages": 17,
+    "approvedImages": 0,
+    "pendingImages": 17,
+    "sources": ["Unsplash", "Pexels"],
+    "maxWidth": 2000,
+    "formats": ["jpg", "webp"]
+  }
+}

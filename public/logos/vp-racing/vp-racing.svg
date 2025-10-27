@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" width="300" height="120">
+  <!-- VP Racing Fuels Logo -->
+  <defs>
+    <style>
+      .vp-red { fill: #E31E24; }
+      .vp-black { fill: #000000; }
+      .vp-white { fill: #FFFFFF; }
+      .vp-yellow { fill: #FFD700; }
+    </style>
+  </defs>
+
+  <!-- Red Oval Background -->
+  <ellipse cx="150" cy="60" rx="140" ry="50" class="vp-red"/>
+  <ellipse cx="150" cy="60" rx="135" ry="45" class="vp-black"/>
+  <ellipse cx="150" cy="60" rx="125" ry="40" class="vp-red"/>
+
+  <!-- VP Text -->
+  <text x="95" y="55" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" class="vp-white" letter-spacing="-2">VP</text>
+
+  <!-- RACING FUELS Text -->
+  <text x="85" y="80" font-family="Arial, sans-serif" font-size="16" font-weight="bold" class="vp-yellow" letter-spacing="2">RACING FUELS</text>
+
+  <!-- Checkered flag accent -->
+  <rect x="30" y="50" width="8" height="8" class="vp-white"/>
+  <rect x="38" y="58" width="8" height="8" class="vp-white"/>
+  <rect x="220" y="50" width="8" height="8" class="vp-white"/>
+  <rect x="228" y="58" width="8" height="8" class="vp-white"/>
+</svg>

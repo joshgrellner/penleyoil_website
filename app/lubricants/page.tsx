@@ -4,15 +4,35 @@ import { SITE_CONFIG } from '@/lib/config';
 import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
-  title: 'Lubricants & Oils | Phillips 66 & Mystik | Penley Oil Company',
-  description: 'Phillips 66 & Mystik lubricants, motor oils, hydraulic fluids, greases. Bulk & packaged. Order premium lubricants for all equipment types.',
+  title: 'Industrial Lubricants & Grease in Oklahoma',
+  description: 'Industrial oils and greases—motor, hydraulic, gear, antifreeze. Bulk, kegs, pails, and cases delivered statewide.',
   openGraph: {
-    title: 'Lubricants & Oils - Penley Oil Company',
-    description: 'Phillips 66 and Mystik lubricants for all your equipment needs.',
+    title: 'Industrial Lubricants & Grease in Oklahoma',
+    description: 'Industrial oils and greases—motor, hydraulic, gear, antifreeze. Bulk, kegs, pails, and cases delivered statewide.',
     url: `${SITE_CONFIG.url}/lubricants`,
+    siteName: 'Penley Oil Company',
+    type: 'website',
+    images: [
+      {
+        url: `${SITE_CONFIG.url}/og/lubricants.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Penley Oil Industrial Lubricants & Grease'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Lubricants & Grease in Oklahoma',
+    description: 'Industrial oils and greases—motor, hydraulic, gear, antifreeze. Bulk, kegs, pails, and cases delivered statewide.',
+    images: [`${SITE_CONFIG.url}/og/lubricants.jpg`]
   },
   alternates: {
     canonical: `${SITE_CONFIG.url}/lubricants`
+  },
+  robots: {
+    index: process.env.VERCEL_ENV !== 'preview',
+    follow: process.env.VERCEL_ENV !== 'preview',
   }
 };
 
@@ -447,7 +467,7 @@ export default function LubricantsPage() {
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Lubricants for Your Equipment?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
             Contact us for product recommendations and pricing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

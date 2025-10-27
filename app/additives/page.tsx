@@ -4,15 +4,35 @@ import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
-  title: 'Fuel Additives | BG Products | Penley Oil Company',
-  description: 'BG Products fuel additives: cetane boosters, anti-gel, fuel stabilizers. Improve performance, protect equipment. Shop fuel additives today.',
+  title: 'Fuel Additives & Tank Care Program | Oklahoma',
+  description: 'Fuel additive program to prevent gelling and deposit issues. Routine tank checks and bottom sampling included.',
   openGraph: {
-    title: 'Fuel Additives - Penley Oil Company',
-    description: 'BG Products additives to protect and enhance your fuel and equipment.',
+    title: 'Fuel Additives & Tank Care Program | Oklahoma',
+    description: 'Fuel additive program to prevent gelling and deposit issues. Routine tank checks and bottom sampling included.',
     url: `${SITE_CONFIG.url}/additives`,
+    siteName: 'Penley Oil Company',
+    type: 'website',
+    images: [
+      {
+        url: `${SITE_CONFIG.url}/og/additives.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Penley Oil Fuel Additives & Tank Care'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fuel Additives & Tank Care Program | Oklahoma',
+    description: 'Fuel additive program to prevent gelling and deposit issues. Routine tank checks and bottom sampling included.',
+    images: [`${SITE_CONFIG.url}/og/additives.jpg`]
   },
   alternates: {
     canonical: `${SITE_CONFIG.url}/additives`
+  },
+  robots: {
+    index: process.env.VERCEL_ENV !== 'preview',
+    follow: process.env.VERCEL_ENV !== 'preview',
   }
 };
 
@@ -420,7 +440,7 @@ export default function AdditivesPage() {
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Questions About Fuel Additives?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
             Our team can help you choose the right products for your equipment and operation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

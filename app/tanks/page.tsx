@@ -4,15 +4,35 @@ import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
-  title: 'Fuel & DEF Tank Solutions | Installation & Management | Penley Oil',
-  description: 'Fuel & DEF tank installation, monitoring & management. Above/below-ground tanks for Oklahoma businesses. Get free tank rental—call today.',
+  title: 'Fuel Tank Rentals & Sales | 500–2,000 Gallon',
+  description: 'Fuel tank rentals and sales—500, 1,000, and 2,000 gal. Single/double-wall, DEF-ready. Delivery and setup available.',
   openGraph: {
-    title: 'Tank Solutions - Penley Oil Company',
-    description: 'Complete fuel and DEF storage tank solutions with installation and monitoring.',
+    title: 'Fuel Tank Rentals & Sales | 500–2,000 Gallon',
+    description: 'Fuel tank rentals and sales—500, 1,000, and 2,000 gal. Single/double-wall, DEF-ready. Delivery and setup available.',
     url: `${SITE_CONFIG.url}/tanks`,
+    siteName: 'Penley Oil Company',
+    type: 'website',
+    images: [
+      {
+        url: `${SITE_CONFIG.url}/og/tanks.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Penley Oil Fuel Tank Rentals & Sales'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fuel Tank Rentals & Sales | 500–2,000 Gallon',
+    description: 'Fuel tank rentals and sales—500, 1,000, and 2,000 gal. Single/double-wall, DEF-ready. Delivery and setup available.',
+    images: [`${SITE_CONFIG.url}/og/tanks.jpg`]
   },
   alternates: {
     canonical: `${SITE_CONFIG.url}/tanks`
+  },
+  robots: {
+    index: process.env.VERCEL_ENV !== 'preview',
+    follow: process.env.VERCEL_ENV !== 'preview',
   }
 };
 
@@ -432,7 +452,7 @@ export default function TanksPage() {
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Install On-Site Fuel Storage?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
             Schedule a free consultation to discuss your tank needs and get a custom quote
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -3,21 +3,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SITE_CONFIG } from '@/lib/config';
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generatePageMetadata } from '@/lib/metadata';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import CTAButton from '@/components/CTAButton';
 
-export const metadata: Metadata = {
-  title: 'DEF (Diesel Exhaust Fluid) Supply | Bulk & Packaged | Penley Oil',
-  description: 'ISO 22241 certified DEF. 20,000+ gallons in stock. Bulk, totes, drums & jugs. Same-day delivery. Never run out—order DEF from Penley Oil today.',
-  openGraph: {
-    title: 'DEF Supply - Penley Oil Company',
-    description: '20,000+ gallons DEF in stock. ISO 22241 certified. Bulk delivery & packaged options.',
-    url: `${SITE_CONFIG.url}/def`,
-  },
-  alternates: {
-    canonical: `${SITE_CONFIG.url}/def`
-  }
-};
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Diesel Exhaust Fluid (DEF) Supplier in Oklahoma',
+  description: 'ISO 22241/API-compliant DEF in jugs, drums, totes, and bulk. Fast delivery across Oklahoma. Request pricing or schedule now.',
+  ogTitle: '20,000+ Gallons DEF Always In Stock',
+  ogDescription: 'ISO certified. Packaged on-site. Never run out. Bulk & retail DEF for all equipment.',
+  path: '/def',
+  ogImage: 'def.jpg',
+  keywords: ['DEF supplier Oklahoma', 'diesel exhaust fluid', 'bulk DEF Oklahoma City', 'DEF delivery']
+});
 
 const defFAQs = [
   {
@@ -71,20 +69,9 @@ export default function DEFPage() {
       <SchemaMarkup schema={schema} />
 
       {/* Hero */}
-      <section className="relative text-white py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/def/def-tote-1.jpg"
-            alt="330-gallon DEF IBC tote with stainless steel coupler in clean warehouse"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
+      <section className="bg-gradient-to-br from-[--penley-green-dark] to-[--penley-green] text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-[--penley-gold]/20 px-6 py-2 rounded-full mb-6">
               <span className="text-[--penley-gold] font-bold text-sm tracking-wider">ISO 22241 CERTIFIED</span>
             </div>
@@ -476,7 +463,7 @@ export default function DEFPage() {
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Order DEF?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
             Get a DEF quote or schedule your first delivery today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

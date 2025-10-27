@@ -23,7 +23,9 @@ export default function QuoteForm({
     product: '',
     quantity: '',
     timeframe: '',
-    message: ''
+    message: '',
+    privacyConsent: false,
+    smsConsent: false
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -86,7 +88,9 @@ export default function QuoteForm({
           product: '',
           quantity: '',
           timeframe: '',
-          message: ''
+          message: '',
+          privacyConsent: false,
+          smsConsent: false
         });
       }, 5000);
     } catch (err) {
@@ -98,9 +102,11 @@ export default function QuoteForm({
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [target.name]: value
     });
   };
 
@@ -119,7 +125,7 @@ export default function QuoteForm({
       {!inline && (
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-800">{description}</p>
         </div>
       )}
 
@@ -288,6 +294,42 @@ export default function QuoteForm({
           />
         </div>
 
+        {/* Consent Checkboxes */}
+        <div className="space-y-3 bg-gray-50 p-4 rounded-md border border-gray-200">
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacyConsent"
+              name="privacyConsent"
+              required
+              checked={formData.privacyConsent}
+              onChange={handleChange}
+              className="mt-1 h-4 w-4 text-[--penley-green] border-gray-300 rounded focus:ring-[--penley-green]"
+            />
+            <label htmlFor="privacyConsent" className="text-sm text-gray-700">
+              <span className="font-medium">Privacy Policy & Terms Consent *</span>
+              <br />
+              I agree to the <a href="/privacy" target="_blank" className="text-[--penley-green] hover:underline">Privacy Policy</a> and <a href="/terms" target="_blank" className="text-[--penley-green] hover:underline">Terms of Service</a>. I consent to Penley Oil Company collecting and processing my information as described.
+            </label>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="smsConsent"
+              name="smsConsent"
+              checked={formData.smsConsent}
+              onChange={handleChange}
+              className="mt-1 h-4 w-4 text-[--penley-green] border-gray-300 rounded focus:ring-[--penley-green]"
+            />
+            <label htmlFor="smsConsent" className="text-sm text-gray-700">
+              <span className="font-medium">SMS/Text Message Consent (Optional)</span>
+              <br />
+              I consent to receive automated text messages from Penley Oil Company at the phone number provided, including delivery notifications and service updates. Message and data rates may apply. Reply STOP to opt out. Consent is not required for purchase. <span className="text-xs text-gray-800">(TCPA Compliant)</span>
+            </label>
+          </div>
+        </div>
+
         <button
           type="submit"
           disabled={submitting}
@@ -296,7 +338,7 @@ export default function QuoteForm({
           {submitting ? 'Submitting...' : 'Submit Request'}
         </button>
 
-        <p className="text-xs text-gray-500 text-center">
+        <p className="text-xs text-gray-700 text-center">
           Or call us directly at <a
             href="tel:4052357553"
             className="text-[--penley-green] font-semibold"

@@ -170,17 +170,17 @@ export default function DriversCtaPage() {
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <div className="text-4xl mb-4">🛡️</div>
                   <h3 className="font-bold mb-2">DOT Compliant</h3>
-                  <p className="text-sm text-gray-600">Full compliance with FMCSA regulations and safety standards</p>
+                  <p className="text-sm text-gray-800">Full compliance with FMCSA regulations and safety standards</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <div className="text-4xl mb-4">✅</div>
                   <h3 className="font-bold mb-2">Modern Equipment</h3>
-                  <p className="text-sm text-gray-600">Well-maintained fleet with latest safety technology</p>
+                  <p className="text-sm text-gray-800">Well-maintained fleet with latest safety technology</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <div className="text-4xl mb-4">📋</div>
                   <h3 className="font-bold mb-2">Ongoing Training</h3>
-                  <p className="text-sm text-gray-600">Regular safety training and certification programs</p>
+                  <p className="text-sm text-gray-800">Regular safety training and certification programs</p>
                 </div>
               </div>
             </div>

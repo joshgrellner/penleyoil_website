@@ -143,10 +143,10 @@ export default function CreditAppWizard() {
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium text-gray-700">
+          <span className="text-sm font-medium text-black">
             Step {currentStep} of {STEPS.length}: {STEPS[currentStep - 1].name}
           </span>
-          <span className="text-sm text-gray-500">{Math.round(progress)}% Complete</span>
+          <span className="text-sm text-black">{Math.round(progress)}% Complete</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
           <div
@@ -194,7 +194,7 @@ export default function CreditAppWizard() {
           className={`px-6 py-3 rounded-md font-medium transition-colors ${
             currentStep === 1
               ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-              : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
+              : 'bg-gray-300 text-black hover:bg-gray-400'
           }`}
         >
           ← Previous

@@ -30,14 +30,14 @@ export default function Footer() {
                   {SITE_CONFIG.contact.phone}
                 </a>
               </div>
-              <div className="text-gray-400">
+              <div className="text-gray-300">
                 {SITE_CONFIG.contact.address.street}<br />
                 {SITE_CONFIG.contact.address.city}, {SITE_CONFIG.contact.address.state} {SITE_CONFIG.contact.address.zip}
               </div>
             </div>
             <div className="mt-4 text-sm">
               <div className="font-semibold text-white mb-1">Hours</div>
-              <div className="text-gray-400 text-xs space-y-1">
+              <div className="text-gray-300 text-xs space-y-1">
                 <div>Mon-Thu: 7:00 AM - 4:30 PM</div>
                 <div>Fri: 7:00 AM - 4:00 PM</div>
                 <div>Weekend delivery by request</div>
@@ -158,12 +158,23 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
             <div>
               &copy; {currentYear} {SITE_CONFIG.name}. All rights reserved.
             </div>
-            <div className="mt-2 md:mt-0">
-              Family Owned & Operated Since {SITE_CONFIG.founded}
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2 md:mt-0">
+              <div className="flex gap-4">
+                <Link href="/privacy" className="hover:text-[--penley-gold]">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="hover:text-[--penley-gold]">
+                  Terms of Service
+                </Link>
+              </div>
+              <div className="hidden md:block text-gray-800">|</div>
+              <div>
+                Family Owned & Operated Since {SITE_CONFIG.founded}
+              </div>
             </div>
           </div>
         </div>

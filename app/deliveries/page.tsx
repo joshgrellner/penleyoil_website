@@ -3,21 +3,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SITE_CONFIG } from '@/lib/config';
 import { generateFAQSchema, generateOrganizationSchema } from '@/lib/schema';
+import { generatePageMetadata } from '@/lib/metadata';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import CTAButton from '@/components/CTAButton';
 
-export const metadata: Metadata = {
-  title: 'Delivery Information | Penley Oil Company',
-  description: 'Fuel & DEF delivery options: next-day standard, same-day expedited, 24/7 emergency service. Flexible scheduling across Oklahoma. Call now.',
-  openGraph: {
-    title: 'Delivery Information - Penley Oil Company',
-    description: 'Next-day standard delivery. Same-day expedited service. 24/7 emergency fueling.',
-    url: `${SITE_CONFIG.url}/deliveries`,
-  },
-  alternates: {
-    canonical: `${SITE_CONFIG.url}/deliveries`
-  }
-};
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Schedule Fuel or DEF Delivery | Penley Oil',
+  description: 'Schedule diesel, gasoline, or DEF delivery. Same/next-day windows, emergency fueling, and clear order cut-offs.',
+  ogTitle: 'Fast Fuel Delivery — Next-Day or Same-Day',
+  ogDescription: '24/7 emergency service. Scheduled auto-delivery. Never run out. Order by 2 PM for next-day.',
+  path: '/deliveries',
+  ogImage: 'deliveries.jpg',
+  keywords: ['fuel delivery Oklahoma', 'diesel delivery OKC', 'emergency fueling', 'same day fuel delivery']
+});
 
 const deliveryFAQs = [
   {
@@ -372,7 +370,7 @@ export default function DeliveriesPage() {
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Schedule a Delivery?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
             Call us now or request a quote online. Fast, reliable delivery when you need it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

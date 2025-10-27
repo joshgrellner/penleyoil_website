@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- BG Products Logo -->
+  <defs>
+    <style>
+      .bg-red { fill: #CC0000; }
+      .bg-black { fill: #000000; }
+      .bg-white { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- Red Oval Badge Background -->
+  <ellipse cx="65" cy="50" rx="55" ry="40" class="bg-red"/>
+  <ellipse cx="65" cy="50" rx="50" ry="36" class="bg-white"/>
+
+  <!-- BG Text in oval -->
+  <text x="40" y="65" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" class="bg-black" letter-spacing="-2">BG</text>
+
+  <!-- PRODUCTS Text -->
+  <text x="130" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="bold" class="bg-black">PRODUCTS</text>
+
+  <!-- Tagline -->
+  <text x="130" y="75" font-family="Arial, sans-serif" font-size="12" font-weight="normal" class="bg-red" letter-spacing="1">FUEL &amp; OIL ADDITIVES</text>
+</svg>

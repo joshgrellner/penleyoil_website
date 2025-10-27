@@ -38,7 +38,7 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-4 group">
-              <img src="/logo.png" alt="Penley Oil Company" className="h-14 w-auto transition-transform group-hover:scale-105" />
+              <img src="/logo.png" alt="Penley Oil Company" width="180" height="56" className="h-14 w-auto transition-transform group-hover:scale-105" />
               <div className="hidden md:block text-xs font-bold text-[--penley-green] border-l-2 border-[--penley-gold] pl-4">
                 <div className="text-[--penley-gold] tracking-wider">SERVING OKLAHOMA</div>
                 <div className="text-[--penley-green]">SINCE 1958</div>
@@ -54,23 +54,23 @@ export default function Header() {
                 <div className="absolute left-0 mt-2 w-64 bg-white shadow-xl rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <Link href="/fuel-delivery" className="block px-4 py-3 hover:bg-green-50 border-b">
                     <div className="font-semibold text-gray-900">Fuel Delivery</div>
-                    <div className="text-xs text-gray-600">Diesel, Gasoline, Kerosene</div>
+                    <div className="text-xs text-gray-800">Diesel, Gasoline, Kerosene</div>
                   </Link>
                   <Link href="/def" className="block px-4 py-3 hover:bg-green-50 border-b">
                     <div className="font-semibold text-gray-900">DEF Supply</div>
-                    <div className="text-xs text-gray-600">Bulk & Packaged DEF</div>
+                    <div className="text-xs text-gray-800">Bulk & Packaged DEF</div>
                   </Link>
                   <Link href="/lubricants" className="block px-4 py-3 hover:bg-green-50 border-b">
                     <div className="font-semibold text-gray-900">Lubricants</div>
-                    <div className="text-xs text-gray-600">Oils, Fluids, Grease</div>
+                    <div className="text-xs text-gray-800">Oils, Fluids, Grease</div>
                   </Link>
                   <Link href="/additives" className="block px-4 py-3 hover:bg-green-50 border-b">
                     <div className="font-semibold text-gray-900">Fuel Additives</div>
-                    <div className="text-xs text-gray-600">BG Products & Tank Management</div>
+                    <div className="text-xs text-gray-800">BG Products & Tank Management</div>
                   </Link>
                   <Link href="/tanks" className="block px-4 py-3 hover:bg-green-50">
                     <div className="font-semibold text-gray-900">Tank Solutions</div>
-                    <div className="text-xs text-gray-600">Rentals, Sales, Service</div>
+                    <div className="text-xs text-gray-800">Rentals, Sales, Service</div>
                   </Link>
                 </div>
               </div>
@@ -102,11 +102,11 @@ export default function Header() {
                 <div className="absolute right-0 mt-2 w-64 bg-white shadow-xl rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <Link href="/credit-application" className="block px-4 py-3 hover:bg-green-50 border-b">
                     <div className="font-semibold text-gray-900">Credit Application</div>
-                    <div className="text-xs text-gray-600">Apply for business credit</div>
+                    <div className="text-xs text-gray-800">Apply for business credit</div>
                   </Link>
                   <Link href="/drivers" className="block px-4 py-3 hover:bg-green-50">
                     <div className="font-semibold text-gray-900">Driver Careers</div>
-                    <div className="text-xs text-gray-600">Join our team</div>
+                    <div className="text-xs text-gray-800">Join our team</div>
                   </Link>
                 </div>
               </div>
@@ -144,19 +144,19 @@ export default function Header() {
             <div className="lg:hidden mt-4 pb-4 space-y-2">
               <div className="border-t pt-4">
                 <div className="font-semibold text-gray-700 mb-2">Services</div>
-                <Link href="/fuel-delivery" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/fuel-delivery" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Fuel Delivery
                 </Link>
-                <Link href="/def" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/def" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   DEF Supply
                 </Link>
-                <Link href="/lubricants" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/lubricants" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Lubricants
                 </Link>
-                <Link href="/additives" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/additives" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Fuel Additives
                 </Link>
-                <Link href="/tanks" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/tanks" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Tank Solutions
                 </Link>
               </div>
@@ -179,10 +179,10 @@ export default function Header() {
 
               <div className="border-t pt-4">
                 <div className="font-semibold text-gray-700 mb-2">Resources</div>
-                <Link href="/credit-application" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/credit-application" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Credit Application
                 </Link>
-                <Link href="/drivers" className="block pl-4 py-2 text-gray-600 hover:text-[--penley-green]">
+                <Link href="/drivers" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Driver Careers
                 </Link>
               </div>

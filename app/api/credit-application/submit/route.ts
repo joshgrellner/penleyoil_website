@@ -29,12 +29,13 @@ export async function POST(request: NextRequest) {
 
     for (const field of fileFields) {
       const file = formData.get(field);
-      if (file && file instanceof File) {
-        const fileName = `${Date.now()}-${field}-${file.name}`;
+      // Check if it's a file-like object (Blob in Node.js)
+      if (file && typeof file === 'object' && 'name' in file && 'type' in file) {
+        const fileName = `${Date.now()}-${field}-${(file as any).name}`;
         const { data, error } = await supabaseAdmin.storage
           .from('credit-app-files')
           .upload(fileName, file, {
-            contentType: file.type,
+            contentType: (file as any).type,
           });
 
         if (error) {
@@ -49,12 +50,13 @@ export async function POST(request: NextRequest) {
     const otherDocs: string[] = [];
     for (let i = 0; i < 5; i++) {
       const file = formData.get(`otherDoc${i}`);
-      if (file && file instanceof File) {
-        const fileName = `${Date.now()}-other-${i}-${file.name}`;
+      // Check if it's a file-like object (Blob in Node.js)
+      if (file && typeof file === 'object' && 'name' in file && 'type' in file) {
+        const fileName = `${Date.now()}-other-${i}-${(file as any).name}`;
         const { data, error } = await supabaseAdmin.storage
           .from('credit-app-files')
           .upload(fileName, file, {
-            contentType: file.type,
+            contentType: (file as any).type,
           });
 
         if (error) {
@@ -105,18 +107,18 @@ export async function POST(request: NextRequest) {
     try {
       await sendCreditAppNotificationToAdmin({
         companyName: validated.companyInfo.legalName,
-        contactName: `${validated.companyInfo.firstName} ${validated.companyInfo.lastName}`,
-        email: validated.companyInfo.email,
-        phone: validated.companyInfo.phone,
+        contactName: validated.companyInfo.apContact.name,
+        email: validated.companyInfo.apContact.email,
+        phone: validated.companyInfo.apContact.phone,
         applicationId: submission.id,
       });
 
       // Send customer confirmation (non-blocking)
       sendCreditAppConfirmationToCustomer({
         companyName: validated.companyInfo.legalName,
-        contactName: validated.companyInfo.firstName,
-        email: validated.companyInfo.email,
-        phone: validated.companyInfo.phone,
+        contactName: validated.companyInfo.apContact.name,
+        email: validated.companyInfo.apContact.email,
+        phone: validated.companyInfo.apContact.phone,
         applicationId: submission.id,
       }).catch((err) => {
         console.error('Failed to send customer confirmation:', err);

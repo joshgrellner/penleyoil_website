@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- Mystik Lubricants Logo -->
+  <defs>
+    <style>
+      .mystik-blue { fill: #003DA5; }
+      .mystik-red { fill: #E2231A; }
+      .mystik-white { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- Oil Droplet Icon -->
+  <path class="mystik-blue" d="M 45 30 Q 35 40 35 55 Q 35 70 45 75 Q 55 70 55 55 Q 55 40 45 30 Z"/>
+  <ellipse cx="42" cy="45" rx="3" ry="5" class="mystik-white" opacity="0.6"/>
+
+  <!-- MYSTIK Text -->
+  <text x="70" y="55" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" class="mystik-blue" letter-spacing="1">MYSTIK</text>
+
+  <!-- LUBRICANTS Text -->
+  <text x="70" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" class="mystik-red" letter-spacing="3">LUBRICANTS</text>
+
+  <!-- Decorative line -->
+  <line x1="70" y1="60" x2="250" y2="60" stroke="#003DA5" stroke-width="1"/>
+</svg>

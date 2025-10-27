@@ -3,40 +3,21 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_CONFIG, SERVICES, INDUSTRIES, CITIES } from '@/lib/config';
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateServiceSchema, generateFAQSchema } from '@/lib/schema';
+import { generatePageMetadata } from '@/lib/metadata';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import CTAButton from '@/components/CTAButton';
 import QuoteForm from '@/components/QuoteForm';
 import LogoStrip from '@/components/LogoStrip';
 
-export const metadata: Metadata = {
-  title: 'Diesel Fuel Delivery & DEF Supply Oklahoma City | Penley Oil Company',
-  description: 'Oklahoma diesel & DEF delivery since 1958. Same-day service, 20,000+ gal in stock, free tanks. Call (405) 235-7553 for bulk fuel delivery.',
-  keywords: [
-    'diesel fuel delivery Oklahoma City',
-    'diesel delivery OKC',
-    'DEF supplier Oklahoma',
-    'bulk DEF Oklahoma City',
-    'diesel exhaust fluid delivery Oklahoma',
-    'emergency fuel delivery OKC',
-    'same day diesel delivery Oklahoma',
-    '24/7 fuel delivery Oklahoma City',
-    'fuel tank rental Oklahoma',
-    'on-road diesel Oklahoma',
-    'off-road diesel delivery OKC',
-    'construction fuel delivery Oklahoma'
-  ],
-  openGraph: {
-    title: 'Diesel Fuel Delivery & DEF Supply Oklahoma City | Penley Oil',
-    description: 'Same-day diesel delivery & guaranteed DEF supply. 20,000+ gallons in stock. Free tank rentals. 24/7 emergency service. Family-owned since 1958.',
-    url: SITE_CONFIG.url,
-    siteName: SITE_CONFIG.name,
-    locale: 'en_US',
-    type: 'website',
-  },
-  alternates: {
-    canonical: SITE_CONFIG.url
-  }
-};
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Home — Fuel, DEF & Lubricants in Oklahoma | Penley Oil',
+  description: 'Same/next-day diesel, DEF, lubricants, and tank solutions across Oklahoma. Call (405) 235-7553 or schedule a delivery online.',
+  ogTitle: "Oklahoma's #1 Fuel & DEF Supplier Since 1958",
+  ogDescription: 'Fast diesel & DEF delivery. Free tank rentals. 24/7 emergency service. Family-owned since 1958.',
+  path: '',
+  ogImage: 'home.jpg',
+  keywords: ['fuel delivery Oklahoma', 'DEF supplier', 'diesel delivery', 'lubricants Oklahoma City']
+});
 
 const homeFAQs = [
   {
@@ -79,7 +60,7 @@ export default function HomePage() {
       <SchemaMarkup schema={schema} />
 
       {/* Hero Section - Bold & Modern */}
-      <section className="relative text-white py-24 md:py-40 overflow-hidden">
+      <section className="relative text-white py-24 md:py-40 overflow-hidden min-h-[600px] md:min-h-[700px]">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -133,7 +114,7 @@ export default function HomePage() {
                 <span className="text-3xl">⚡</span>
               </div>
               <h3 className="text-2xl font-black mb-3 text-[--penley-green]">Fastest Response</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-800 leading-relaxed">
                 Reliable next-day delivery across Oklahoma City metro. Same-day and emergency fueling available 24/7.
               </p>
             </div>
@@ -143,7 +124,7 @@ export default function HomePage() {
                 <span className="text-3xl">🛡️</span>
               </div>
               <h3 className="text-2xl font-black mb-3 text-[--penley-green]">Guaranteed DEF Supply</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-800 leading-relaxed">
                 Over 20,000 gallons in stock. ISO 22241 & API certified. We never run out.
               </p>
             </div>
@@ -153,7 +134,7 @@ export default function HomePage() {
                 <span className="text-3xl">⭐</span>
               </div>
               <h3 className="text-2xl font-black mb-3 text-[--penley-green]">Family Owned Since 1958</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-800 leading-relaxed">
                 Three generations of fuel delivery experience. Real Oklahoma operations expertise.
               </p>
             </div>
@@ -171,7 +152,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-[--penley-green]">
               Diesel Fuel & DEF Delivery Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed">
               From same-day diesel delivery to guaranteed DEF supply to free tank rentals, we handle all your fuel needs with unmatched reliability.
             </p>
           </div>
@@ -184,7 +165,7 @@ export default function HomePage() {
                   Fuel Delivery
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 On-road diesel, off-road diesel, gasoline, kerosene, and solvents delivered to your site.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -205,7 +186,7 @@ export default function HomePage() {
                   DEF Supply
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 ISO 22241 & API certified Diesel Exhaust Fluid. Bulk and packaged options.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -226,7 +207,7 @@ export default function HomePage() {
                   Lubricants & Fluids
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Motor oils, hydraulic fluids, gear oils, grease, and specialty fluids.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -247,7 +228,7 @@ export default function HomePage() {
                   Fuel Additives
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 BG Products fuel treatments with free tank management program.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -268,7 +249,7 @@ export default function HomePage() {
                   Tank Solutions
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Fuel tank rentals, sales, installation, and service.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -289,7 +270,7 @@ export default function HomePage() {
                   Delivery Service
                 </Link>
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-800 mb-4">
                 Flexible delivery options with predictive ordering and automatic refills.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -311,7 +292,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-800">
               Trusted by businesses across Oklahoma for reliable fuel and DEF delivery
             </p>
           </div>
@@ -325,7 +306,7 @@ export default function HomePage() {
               >
                 <div className="text-4xl mb-3">{industry.icon}</div>
                 <h3 className="font-bold text-lg mb-2">{industry.name}</h3>
-                <p className="text-sm text-gray-600">{industry.description.substring(0, 80)}...</p>
+                <p className="text-sm text-gray-800">{industry.description.substring(0, 80)}...</p>
               </Link>
             ))}
           </div>
@@ -351,7 +332,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Serving Oklahoma & Beyond</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-800">
               Fuel & lubricants within 1 hour of OKC • DEF delivery statewide & across OK, TX, KS, NM
             </p>
           </div>
@@ -407,7 +388,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Call us today for same-day fuel delivery, bulk DEF supply, or tank rental quotes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

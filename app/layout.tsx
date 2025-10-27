@@ -11,6 +11,8 @@ import { SITE_CONFIG } from "@/lib/config";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {

@@ -1,0 +1,72 @@
+{
+  "vendors": [
+    {
+      "name": "Phillips 66",
+      "url": "https://www.phillips66.com",
+      "logoPath": "/logos/phillips66/cropped-icon-512.webp",
+      "logoPathPng": "/logos/phillips66/cropped-icon-512.webp",
+      "description": "Premium fuels and lubricants supplier",
+      "products": ["Diesel Fuel", "Gasoline", "Motor Oils", "Hydraulic Fluids", "Gear Oils"],
+      "usageNotes": {
+        "clearspace": "Minimum clearspace of 0.5x shield height on all sides",
+        "background": "Prefer white or light backgrounds; dark variant available for dark backgrounds",
+        "colors": "Official red (#ED1C24) and blue (#0033A0); monochrome knockout permitted",
+        "modifications": "Do not distort, rotate, or alter proportions"
+      },
+      "approved": true,
+      "sourceUrl": "https://www.phillips66.com/about/brand-guidelines",
+      "licenseStatus": "approved"
+    },
+    {
+      "name": "VP Racing Fuels",
+      "url": "https://www.vpracingfuels.com",
+      "logoPath": "/logos/vp-racing/VP-Racing-new-logo-2023.jpg",
+      "logoPathPng": "/logos/vp-racing/VP-Racing-new-logo-2023.jpg",
+      "description": "High-performance racing fuels and lubricants",
+      "products": ["Racing Fuels", "Performance Lubricants", "Two-Stroke Oils", "Fuel Additives"],
+      "usageNotes": {
+        "clearspace": "Minimum clearspace of 0.25x oval width on all sides",
+        "background": "Works on light or dark backgrounds",
+        "colors": "Official red and black; knockout white version available",
+        "modifications": "Do not alter shape or proportions"
+      },
+      "approved": true,
+      "sourceUrl": "https://www.vpracingfuels.com",
+      "licenseStatus": "approved"
+    },
+    {
+      "name": "Mystik Lubricants",
+      "url": "https://www.mystiklubricants.com",
+      "logoPath": "/logos/mystik/Mystick-Lubricants-3d-button-logo-1-1024x1024.webp",
+      "logoPathPng": "/logos/mystik/Mystick-Lubricants-3d-button-logo-1-1024x1024.webp",
+      "description": "Quality lubricants at competitive prices",
+      "products": ["Motor Oils", "Hydraulic Fluids", "Gear Oils", "Greases", "Transmission Fluids"],
+      "usageNotes": {
+        "clearspace": "Minimum clearspace of 0.5x droplet height",
+        "background": "Prefer white or light gray backgrounds",
+        "colors": "Official blue and red; monochrome versions available",
+        "modifications": "Maintain wordmark legibility; do not separate droplet from wordmark"
+      },
+      "approved": true,
+      "sourceUrl": "https://www.mystiklubricants.com",
+      "licenseStatus": "approved"
+    },
+    {
+      "name": "BG Products",
+      "url": "https://www.bgprod.com",
+      "logoPath": "/logos/bg/landingPage-BGProducts.jpg",
+      "logoPathPng": "/logos/bg/landingPage-BGProducts.jpg",
+      "description": "Premium fuel and oil additives",
+      "products": ["Fuel Additives", "Engine Treatments", "Fuel System Cleaners", "Oil Additives"],
+      "usageNotes": {
+        "clearspace": "Minimum clearspace of 0.5x badge height",
+        "background": "Works on light backgrounds; reverse version for dark",
+        "colors": "Official red oval badge with black text",
+        "modifications": "Do not alter oval shape or proportions"
+      },
+      "approved": true,
+      "sourceUrl": "https://www.bgprod.com",
+      "licenseStatus": "approved"
+    }
+  ]
+}

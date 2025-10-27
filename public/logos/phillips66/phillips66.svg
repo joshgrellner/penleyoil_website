@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- Phillips 66 Shield Logo -->
+  <defs>
+    <style>
+      .shield-red { fill: #ED1C24; }
+      .shield-blue { fill: #0033A0; }
+      .shield-white { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- Blue Shield Background -->
+  <path class="shield-blue" d="M 50 15 L 80 15 L 90 30 L 90 60 L 65 85 L 40 60 L 40 30 Z"/>
+
+  <!-- Red Star -->
+  <polygon class="shield-red" points="65,25 68,35 78,35 70,41 73,51 65,45 57,51 60,41 52,35 62,35"/>
+
+  <!-- White 66 -->
+  <text x="52" y="75" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" class="shield-white">66</text>
+
+  <!-- Company Name -->
+  <text x="100" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" class="shield-blue">Phillips 66</text>
+</svg>

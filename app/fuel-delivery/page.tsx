@@ -7,15 +7,35 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
-  title: 'Fuel Delivery Services | Diesel & Gasoline | Penley Oil Company',
-  description: 'Bulk diesel & gasoline delivery across Oklahoma. Same-day service for construction, agriculture, fleets. Schedule your fuel delivery today.',
+  title: 'Diesel & Fuel Delivery Across Oklahoma',
+  description: 'On-road/off-road diesel, gasoline, and kerosene delivered statewide. Generator top-offs and emergency fueling available.',
   openGraph: {
-    title: 'Fuel Delivery Services - Penley Oil Company',
-    description: 'Bulk diesel and gasoline delivery for businesses across Oklahoma.',
+    title: 'Diesel & Fuel Delivery Across Oklahoma',
+    description: 'On-road/off-road diesel, gasoline, and kerosene delivered statewide. Generator top-offs and emergency fueling available.',
     url: `${SITE_CONFIG.url}/fuel-delivery`,
+    siteName: 'Penley Oil Company',
+    type: 'website',
+    images: [
+      {
+        url: `${SITE_CONFIG.url}/og/fuel-delivery.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Penley Oil Diesel & Fuel Delivery Services'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Diesel & Fuel Delivery Across Oklahoma',
+    description: 'On-road/off-road diesel, gasoline, and kerosene delivered statewide. Generator top-offs and emergency fueling available.',
+    images: [`${SITE_CONFIG.url}/og/fuel-delivery.jpg`]
   },
   alternates: {
     canonical: `${SITE_CONFIG.url}/fuel-delivery`
+  },
+  robots: {
+    index: process.env.VERCEL_ENV !== 'preview',
+    follow: process.env.VERCEL_ENV !== 'preview',
   }
 };
 
@@ -64,20 +84,9 @@ export default function FuelDeliveryPage() {
       <SchemaMarkup schema={schema} />
 
       {/* Hero */}
-      <section className="relative text-white py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/fuel/fuel-delivery-1.jpg"
-            alt="Diesel fuel nozzle filling above-ground commercial fuel storage tank"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
+      <section className="bg-gradient-to-br from-[--penley-green-dark] to-[--penley-green] text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-[--penley-gold]/20 px-6 py-2 rounded-full mb-6">
               <span className="text-[--penley-gold] font-bold text-sm tracking-wider">BULK FUEL DELIVERY</span>
             </div>
@@ -414,7 +423,7 @@ export default function FuelDeliveryPage() {
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Schedule Fuel Delivery?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
             Get a fuel quote or schedule your first delivery today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

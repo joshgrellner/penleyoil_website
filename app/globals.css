@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Penley Oil Brand Colors - Extracted from Logo */
+  --penley-green: #1a5232;
+  --penley-green-light: #2d6f47;
+  --penley-green-dark: #0d3820;
+  --penley-gold: #b8924a;
+  --penley-gold-light: #d4a961;
+  --penley-gold-dark: #9a7a3d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom Penley Oil colors */
+  --color-penley-green: var(--penley-green);
+  --color-penley-green-light: var(--penley-green-light);
+  --color-penley-green-dark: var(--penley-green-dark);
+  --color-penley-gold: var(--penley-gold);
+  --color-penley-gold-light: var(--penley-gold-light);
+  --color-penley-gold-dark: var(--penley-gold-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure proper text contrast - all text is black for maximum readability */
+.text-gray-300 {
+  color: #000000 !important;
+}
+
+.text-gray-400 {
+  color: #000000 !important;
+}
+
+.text-gray-500 {
+  color: #000000 !important;
+}
+
+.text-gray-600 {
+  color: #000000 !important;
+}
+
+.text-gray-700 {
+  color: #000000 !important;
+}
+
+.text-gray-800 {
+  color: #000000 !important;
+}
+
+.text-gray-900 {
+  color: #000000 !important;
+}
+
+/* Exception: Keep footer text light on dark background */
+footer .text-gray-300,
+footer .text-gray-400,
+footer .text-gray-500,
+footer .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+/* Exception: Keep disabled button text gray for UX */
+button:disabled .text-gray-400,
+button.cursor-not-allowed .text-gray-400,
+.cursor-not-allowed.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Ensure headings on light backgrounds are dark */
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
+/* Ensure text-black class always works on headings */
+h1.text-black, h2.text-black, h3.text-black, h4.text-black, h5.text-black, h6.text-black {
+  color: #000000 !important;
+}
+
+/* Make sure section headings on gray backgrounds are very dark */
+.bg-gray-50 h2,
+.bg-gray-100 h2,
+.bg-white h2 {
+  color: var(--penley-green) !important;
+}
+
+/* Fix Tailwind arbitrary value color classes */
+.text-\[--penley-green\] {
+  color: #1a5232 !important;
+}
+
+.text-\[--penley-green-dark\] {
+  color: #0d3820 !important;
+}
+
+.text-\[--penley-gold\] {
+  color: #b8924a !important;
+}
+
+.bg-\[--penley-green\] {
+  background-color: #1a5232 !important;
+}
+
+.bg-\[--penley-green-dark\] {
+  background-color: #0d3820 !important;
+}
+
+.bg-\[--penley-green-light\] {
+  background-color: #2d6f47 !important;
+}
+
+.bg-\[--penley-gold\] {
+  background-color: #b8924a !important;
+}
+
+.bg-\[--penley-gold-dark\] {
+  background-color: #9a7a3d !important;
+}
+
+.border-\[--penley-gold\] {
+  border-color: #b8924a !important;
+}
+
+.border-\[--penley-green\] {
+  border-color: #1a5232 !important;
+}
+
+.hover\:text-\[--penley-green\]:hover {
+  color: #1a5232 !important;
+}
+
+.hover\:text-\[--penley-gold\]:hover {
+  color: #b8924a !important;
+}
+
+.hover\:bg-\[--penley-green-dark\]:hover {
+  background-color: #0d3820 !important;
+}
+
+.hover\:bg-\[--penley-gold-dark\]:hover {
+  background-color: #9a7a3d !important;
+}
+
+.from-\[--penley-green\] {
+  --tw-gradient-from: #1a5232 !important;
+  --tw-gradient-to: rgb(26 82 50 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.from-\[--penley-green-dark\] {
+  --tw-gradient-from: #0d3820 !important;
+  --tw-gradient-to: rgb(13 56 32 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-\[--penley-green\] {
+  --tw-gradient-to: #1a5232 !important;
+}
+
+.to-\[--penley-green-light\] {
+  --tw-gradient-to: #2d6f47 !important;
+}
+
+/* Improve form input visibility */
+input, textarea, select {
+  color: #111827 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+}
