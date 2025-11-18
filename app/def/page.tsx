@@ -36,7 +36,7 @@ const defFAQs = [
   },
   {
     question: 'Where do you deliver DEF?',
-    answer: 'We deliver DEF throughout Oklahoma and to surrounding states including Texas, Kansas, and New Mexico. In the Oklahoma City metro area, we offer next-day standard delivery and same-day expedited service. For bulk DEF orders (330-gallon totes and larger), we service a wider geographic area across the central plains.'
+    answer: 'We deliver DEF throughout Oklahoma and to surrounding states including Texas, Kansas, Missouri, and Arkansas. In the Oklahoma City metro area, we offer next-day standard delivery and same-day expedited service. For bulk DEF orders (330-gallon totes and larger), we service a wider geographic area across the central plains.'
   },
   {
     question: 'Can you set up a DEF storage tank at our facility?',

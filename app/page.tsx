@@ -34,7 +34,7 @@ const homeFAQs = [
   },
   {
     question: 'What areas do you deliver to?',
-    answer: 'We deliver fuel and lubricants within the Oklahoma City metro area (approximately 1 hour radius). For DEF, we service all of Oklahoma plus Texas, Kansas, and New Mexico. We serve construction sites, farms, fleets, and commercial facilities throughout our service area.'
+    answer: 'We deliver fuel and lubricants within the Oklahoma City metro area (approximately 1 hour radius). For DEF, we service all of Oklahoma plus Texas, Kansas, Missouri, and Arkansas. We serve construction sites, farms, fleets, and commercial facilities throughout our service area.'
   }
 ];
 
@@ -50,7 +50,7 @@ export default function HomePage() {
     generateServiceSchema({
       name: 'DEF Supply',
       description: 'Bulk and packaged Diesel Exhaust Fluid with guaranteed supply',
-      areaServed: 'Oklahoma, Texas, Kansas, New Mexico'
+      areaServed: 'Oklahoma, Texas, Kansas, Missouri, Arkansas'
     }),
     generateFAQSchema(homeFAQs)
   ];

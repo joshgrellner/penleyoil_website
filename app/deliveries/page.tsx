@@ -24,7 +24,7 @@ const deliveryFAQs = [
   },
   {
     question: 'Do you deliver on weekends?',
-    answer: 'Yes, weekend delivery is available by request for an additional fee. We also offer 24/7 emergency delivery service for urgent fueling needs. Contact us at (405) 235-7553 to schedule weekend delivery.'
+    answer: 'Yes, weekend delivery is available by request for an additional fee. We also offer 24/7 emergency delivery service for urgent fueling needs. Contact us at (405) 235-7553 for scheduling or call (405) 500-7269 for emergency delivery.'
   },
   {
     question: 'What is the minimum delivery order?',
@@ -36,11 +36,11 @@ const deliveryFAQs = [
   },
   {
     question: 'Do you offer emergency fuel delivery?',
-    answer: 'Yes, we provide 24/7 emergency fuel delivery across Oklahoma. If you run out of fuel or have an urgent need, call (405) 235-7553 anytime. Our emergency service ensures your operations never stop due to fuel shortages.'
+    answer: 'Yes, we provide 24/7 emergency fuel delivery across Oklahoma. If you run out of fuel or have an urgent need, call (405) 500-7269 anytime. Our emergency service ensures your operations never stop due to fuel shortages.'
   },
   {
     question: 'What areas do you deliver to?',
-    answer: 'We deliver throughout Oklahoma City metro and statewide across Oklahoma. We also service parts of Texas, Kansas, and New Mexico for bulk orders. Next-day and same-day service is available within the OKC metro area.'
+    answer: 'We deliver throughout Oklahoma City metro and statewide across Oklahoma. For DEF, we also service Texas, Kansas, Missouri, and Arkansas. Next-day and same-day service is available within the OKC metro area.'
   }
 ];
 
@@ -166,10 +166,10 @@ export default function DeliveriesPage() {
                 </ul>
                 <div className="mt-6 pt-6 border-t-2 border-red-200">
                   <a
-                    href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
+                    href={`tel:${SITE_CONFIG.contact.emergency.phoneRaw}`}
                     className="block text-center bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors"
                   >
-                    Call {SITE_CONFIG.contact.phone}
+                    Call {SITE_CONFIG.contact.emergency.phone}
                   </a>
                 </div>
               </div>

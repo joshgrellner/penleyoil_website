@@ -125,8 +125,8 @@ export default function ContactPage() {
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 mt-6">
                   <h3 className="font-bold text-lg mb-1" style={{color: '#dc2626'}}>Emergency Fueling</h3>
                   <p className="text-gray-800 mb-2">24/7 emergency service available</p>
-                  <a href={`tel:${SITE_CONFIG.contact.phoneRaw}`} className="text-red-700 hover:underline font-semibold">
-                    Call {SITE_CONFIG.contact.phone}
+                  <a href={`tel:${SITE_CONFIG.contact.emergency.phoneRaw}`} className="text-red-700 hover:underline font-semibold">
+                    Call {SITE_CONFIG.contact.emergency.phone}
                   </a>
                 </div>
               </div>

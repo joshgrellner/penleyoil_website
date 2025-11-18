@@ -46,7 +46,7 @@ const fuelFAQs = [
   },
   {
     question: 'Do you deliver diesel fuel on weekends in Oklahoma?',
-    answer: 'Yes, weekend diesel delivery is available upon request in Oklahoma City and surrounding areas. Weekend and after-hours delivery can be arranged when you place your order. For emergency fueling needs, we provide 24/7 service. Call (405) 235-7553 to schedule weekend delivery.'
+    answer: 'Yes, weekend diesel delivery is available upon request in Oklahoma City and surrounding areas. Weekend and after-hours delivery can be arranged when you place your order. For emergency fueling needs, we provide 24/7 service. Call (405) 235-7553 to schedule weekend delivery or (405) 500-7269 for emergency service.'
   },
   {
     question: 'What types of diesel fuel do you deliver?',
@@ -58,7 +58,7 @@ const fuelFAQs = [
   },
   {
     question: 'How quickly can you deliver fuel in an emergency?',
-    answer: 'We provide 24/7 emergency fuel delivery service for critical situations like generator fuel, stranded equipment, or unexpected shortages. Emergency deliveries typically arrive within a few hours depending on your location and our driver availability. Call (405) 235-7553 immediately for emergency fueling needs.'
+    answer: 'We provide 24/7 emergency fuel delivery service for critical situations like generator fuel, stranded equipment, or unexpected shortages. Emergency deliveries typically arrive within a few hours depending on your location and our driver availability. Call (405) 500-7269 immediately for emergency fueling needs.'
   },
   {
     question: 'Can you fuel equipment on construction sites or remote locations?',

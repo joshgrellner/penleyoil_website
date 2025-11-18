@@ -45,7 +45,7 @@ const normanFAQs = [
   },
   {
     question: 'How quickly can you deliver fuel in Norman?',
-    answer: 'For Norman customers, we offer next-business-day delivery as our standard service. Same-day expedited delivery is available for urgent needs (additional fee applies). For emergency situations like generator fuel or equipment breakdowns, we provide 24/7 emergency service. Call (405) 235-7553 for same-day or emergency delivery to Norman.'
+    answer: 'For Norman customers, we offer next-business-day delivery as our standard service. Same-day expedited delivery is available for urgent needs (additional fee applies). For emergency situations like generator fuel or equipment breakdowns, we provide 24/7 emergency service. Call (405) 235-7553 for same-day delivery or (405) 500-7269 for emergency delivery to Norman.'
   },
   {
     question: 'Do you serve the University of Oklahoma area?',

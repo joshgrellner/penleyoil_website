@@ -9,6 +9,10 @@ export const SITE_CONFIG = {
   contact: {
     phone: '(405) 235-7553',
     phoneRaw: '4052357553',
+    emergency: {
+      phone: '(405) 500-7269',
+      phoneRaw: '4055007269'
+    },
     email: 'info@penleyoil.com',
     address: {
       street: '2627 W. Reno Ave',
@@ -89,7 +93,7 @@ export const SERVICES = {
       '>20,000 gallon local storage',
       'On-site packaging facility',
       'Statewide Oklahoma delivery',
-      'Service to TX, KS, NM',
+      'Service to TX, KS, MO, AR',
       'DEF equipment and pumps available',
       'Quality testing and compliance'
     ]
@@ -179,8 +183,8 @@ export const SERVICE_AREAS = {
   },
   regional: {
     name: 'Multi-State DEF Supply',
-    description: 'DEF delivery to Oklahoma, Texas, Kansas, and New Mexico',
-    states: ['OK', 'TX', 'KS', 'NM']
+    description: 'DEF delivery to Oklahoma, Texas, Kansas, Missouri, and Arkansas',
+    states: ['OK', 'TX', 'KS', 'MO', 'AR']
   }
 } as const;
 
@@ -291,7 +295,7 @@ export const DELIVERY_SLAS = {
   emergency: {
     name: 'Emergency Fueling',
     timing: '24/7 availability',
-    contact: '(405) 235-7553',
+    contact: '(405) 500-7269',
     description: 'Critical fuel delivery for generators, hospitals, fleets, and equipment breakdowns'
   },
   weekend: {
