@@ -8,6 +8,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 import CTAButton from '@/components/CTAButton';
 import QuoteForm from '@/components/QuoteForm';
 import LogoStrip from '@/components/LogoStrip';
+import HeroCarousel from '@/components/HeroCarousel';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Home — Fuel, DEF & Lubricants in Oklahoma | Penley Oil',
@@ -59,51 +60,8 @@ export default function HomePage() {
     <>
       <SchemaMarkup schema={schema} />
 
-      {/* Hero Section - Bold & Modern */}
-      <section className="relative text-white py-24 md:py-40 overflow-hidden min-h-[600px] md:min-h-[700px]">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/home/home-hero-1.png"
-            alt="Penley Oil fuel delivery bobtail truck refilling commercial fuel tank at Oklahoma construction site"
-            fill
-            priority
-            quality={95}
-            className="object-cover object-center scale-95"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
-          <div className="absolute inset-0 bg-[--penley-green-dark]/30"></div>
-        </div>
-
-        {/* Accent decoration */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[--penley-gold] opacity-10 rounded-full blur-3xl z-[1]"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[--penley-gold] opacity-5 rounded-full blur-3xl z-[1]"></div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl">
-            <div className="inline-flex items-center bg-[--penley-gold]/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-bold mb-8 border border-[--penley-gold]/30">
-              <span className="text-[--penley-gold]">★</span>
-              <span className="ml-2">SERVING OKLAHOMA SINCE 1958</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5)' }}>
-              Oklahoma's Premier<br />
-              <span className="text-[--penley-gold]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9), -1px -1px 2px rgba(0,0,0,0.6)' }}>Fuel & DEF</span> Distributor
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 text-gray-100 font-medium max-w-3xl leading-relaxed" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5)' }}>
-              Next-day fuel delivery • Guaranteed DEF supply • Free tank rentals • 24/7 emergency service available
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <CTAButton href="/contact?quote=true" size="lg">
-                Schedule a Delivery →
-              </CTAButton>
-              <CTAButton href={`tel:${SITE_CONFIG.contact.phoneRaw}`} variant="outline" size="lg">
-                📞 {SITE_CONFIG.contact.phone}
-              </CTAButton>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Carousel */}
+      <HeroCarousel />
 
       {/* Value Props - Modern Card Design */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">

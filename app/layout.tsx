@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import PageViewTracker from "@/components/PageViewTracker";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 import { SITE_CONFIG } from "@/lib/config";
 
 const inter = Inter({
@@ -76,6 +77,7 @@ export default function RootLayout({
           <PageViewTracker />
         </Suspense>
 
+        <AnnouncementBanner />
         <Header />
         <main>{children}</main>
         <Footer />
