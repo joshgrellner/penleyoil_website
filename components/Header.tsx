@@ -68,9 +68,13 @@ export default function Header() {
                     <div className="font-semibold text-gray-900">Fuel Additives</div>
                     <div className="text-xs text-gray-800">BG Products & Tank Management</div>
                   </Link>
-                  <Link href="/tanks" className="block px-4 py-3 hover:bg-green-50">
+                  <Link href="/tanks" className="block px-4 py-3 hover:bg-green-50 border-b">
                     <div className="font-semibold text-gray-900">Tank Solutions</div>
                     <div className="text-xs text-gray-800">Rentals, Sales, Service</div>
+                  </Link>
+                  <Link href="/multiseal" className="block px-4 py-3 hover:bg-green-50">
+                    <div className="font-semibold text-gray-900">MULTI SEAL Tire Sealant</div>
+                    <div className="text-xs text-gray-800">Industrial Tire Protection</div>
                   </Link>
                 </div>
               </div>
@@ -158,6 +162,9 @@ export default function Header() {
                 </Link>
                 <Link href="/tanks" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
                   Tank Solutions
+                </Link>
+                <Link href="/multiseal" className="block pl-4 py-2 text-gray-800 hover:text-[--penley-green]">
+                  MULTI SEAL Tire Sealant
                 </Link>
               </div>
 

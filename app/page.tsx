@@ -283,6 +283,27 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
+
+            {/* Multiseal */}
+            <div className="border-2 border-gray-200 rounded-lg p-6 hover:border-[--penley-green] transition-colors">
+              <h3 className="text-2xl font-bold mb-3">
+                <Link href="/multiseal" className="text-[--penley-green] hover:text-[--penley-green-dark]">
+                  MULTI SEAL Tire Sealant
+                </Link>
+              </h3>
+              <p className="text-gray-800 mb-4">
+                Industrial tire protection that reduces flats by up to 95%. Authorized distributor.
+              </p>
+              <ul className="text-sm text-gray-700 space-y-2 mb-4">
+                <li>✓ HYDRO 1500, PRO HD 2500, ARMOR 3500</li>
+                <li>✓ Lifetime tire protection</li>
+                <li>✓ Commercial & industrial fleets</li>
+                <li>✓ FlatOut for recreational use</li>
+              </ul>
+              <Link href="/multiseal" className="text-[--penley-green] font-semibold hover:underline">
+                Learn More →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
