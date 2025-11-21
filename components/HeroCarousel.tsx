@@ -56,7 +56,7 @@ const slides: Slide[] = [
       text: 'Request Information',
       href: '/contact?quote=true'
     },
-    backgroundImage: '/images/home/home-hero-1.png',
+    backgroundImage: '/images/tanks/tanks-hero.jpg',
     backgroundAlt: 'MULTI SEAL tire sealant protection for commercial vehicles'
   }
 ];
@@ -111,8 +111,18 @@ export default function HeroCarousel() {
               className="object-cover object-center scale-95"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
-            <div className="absolute inset-0 bg-[--penley-green-dark]/30"></div>
+            {/* Different gradient overlay for MULTI SEAL slide */}
+            {slide.id === 2 ? (
+              <>
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-[--penley-green-dark]/85 to-black/80"></div>
+                <div className="absolute inset-0 bg-[--penley-gold]/10"></div>
+              </>
+            ) : (
+              <>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
+                <div className="absolute inset-0 bg-[--penley-green-dark]/30"></div>
+              </>
+            )}
           </div>
 
           {/* Accent decoration */}
