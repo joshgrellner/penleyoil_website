@@ -56,7 +56,7 @@ const slides: Slide[] = [
       text: 'Request Information',
       href: '/contact?quote=true'
     },
-    backgroundImage: '/images/tanks/tanks-hero.jpg',
+    backgroundImage: '', // Use gradient background instead
     backgroundAlt: 'MULTI SEAL tire sealant protection for commercial vehicles'
   }
 ];
@@ -102,25 +102,45 @@ export default function HeroCarousel() {
         >
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
-            <Image
-              src={slide.backgroundImage}
-              alt={slide.backgroundAlt}
-              fill
-              priority={index === 0}
-              quality={95}
-              className="object-cover object-center scale-95"
-              sizes="100vw"
-            />
-            {/* Different gradient overlay for MULTI SEAL slide */}
-            {slide.id === 2 ? (
+            {slide.backgroundImage ? (
               <>
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-[--penley-green-dark]/85 to-black/80"></div>
-                <div className="absolute inset-0 bg-[--penley-gold]/10"></div>
-              </>
-            ) : (
-              <>
+                <Image
+                  src={slide.backgroundImage}
+                  alt={slide.backgroundAlt}
+                  fill
+                  priority={index === 0}
+                  quality={95}
+                  className="object-cover object-center scale-95"
+                  sizes="100vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[--penley-green-dark]/70 to-transparent"></div>
                 <div className="absolute inset-0 bg-[--penley-green-dark]/30"></div>
+              </>
+            ) : (
+              // Gradient background for MULTI SEAL slide
+              <>
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-[--penley-green-dark] to-gray-800"></div>
+                <div className="absolute inset-0 bg-[--penley-gold]/5"></div>
+                {/* Tire tread pattern overlay */}
+                <div
+                  className="absolute inset-0 opacity-10"
+                  style={{
+                    backgroundImage: `repeating-linear-gradient(
+                      45deg,
+                      transparent,
+                      transparent 10px,
+                      rgba(255,255,255,0.03) 10px,
+                      rgba(255,255,255,0.03) 20px
+                    ),
+                    repeating-linear-gradient(
+                      -45deg,
+                      transparent,
+                      transparent 10px,
+                      rgba(255,255,255,0.03) 10px,
+                      rgba(255,255,255,0.03) 20px
+                    )`
+                  }}
+                ></div>
               </>
             )}
           </div>
