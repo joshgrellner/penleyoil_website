@@ -76,6 +76,7 @@ export default function DEFPage() {
             alt="Blue DEF pump sign at fueling station during sunset - Diesel Exhaust Fluid supply"
             fill
             priority
+            quality={75}
             className="object-cover"
             sizes="100vw"
           />

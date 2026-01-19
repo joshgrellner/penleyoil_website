@@ -47,6 +47,7 @@ export default function AdditivesPage() {
             alt="Industrial gears with golden lubricant additive flowing - fuel additive performance"
             fill
             priority
+            quality={75}
             className="object-cover"
             sizes="100vw"
           />
