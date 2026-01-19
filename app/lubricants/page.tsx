@@ -47,6 +47,7 @@ export default function LubricantsPage() {
             alt="Mechanic pouring golden motor oil into vehicle engine at Penley Oil lubricants service"
             fill
             priority
+            quality={75}
             className="object-cover"
             sizes="100vw"
           />

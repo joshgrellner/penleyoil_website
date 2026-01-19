@@ -151,16 +151,31 @@ export default function ContactPage() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Visit Our Location</h2>
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(SITE_CONFIG.contact.address.full)}`}
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Penley Oil Company Location"
-              />
+              {process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ? (
+                <iframe
+                  src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(SITE_CONFIG.contact.address.full)}`}
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Penley Oil Company Location"
+                />
+              ) : (
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(SITE_CONFIG.contact.address.full)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-gray-100 h-[450px] flex items-center justify-center hover:bg-gray-200 transition-colors"
+                >
+                  <div className="text-center">
+                    <span className="text-4xl mb-4 block">📍</span>
+                    <p className="text-gray-700 font-semibold">View on Google Maps</p>
+                    <p className="text-gray-500 text-sm mt-1">{SITE_CONFIG.contact.address.full}</p>
+                  </div>
+                </a>
+              )}
             </div>
           </div>
         </div>

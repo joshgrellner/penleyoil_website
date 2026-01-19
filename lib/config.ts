@@ -44,10 +44,10 @@ export const SITE_CONFIG = {
     // Add when available
   },
 
-  analytics: {
-    gaId: 'G-XXXXXXXXXX', // Replace with actual GA4 ID
-    gtmId: 'GTM-XXXXXXX'  // Replace with actual GTM ID
-  }
+  // Analytics IDs are configured via environment variables:
+  // - NEXT_PUBLIC_GA4_ID (Google Analytics 4)
+  // - NEXT_PUBLIC_GTM_ID (Google Tag Manager)
+  // See .env.example for setup instructions
 } as const;
 
 export const SERVICES = {

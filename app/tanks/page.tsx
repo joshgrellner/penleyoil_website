@@ -47,6 +47,7 @@ export default function TanksPage() {
             alt="Multiple industrial fuel storage tanks with safety equipment and valves in outdoor facility"
             fill
             priority
+            quality={75}
             className="object-cover"
             sizes="100vw"
           />

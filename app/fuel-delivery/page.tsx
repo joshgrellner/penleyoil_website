@@ -91,6 +91,7 @@ export default function FuelDeliveryPage() {
             alt="Fuel tanker truck delivering diesel at commercial site with hoses and safety equipment"
             fill
             priority
+            quality={75}
             className="object-cover"
             sizes="100vw"
           />

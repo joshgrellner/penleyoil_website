@@ -41,9 +41,10 @@ export function generatePageMetadata(options: PageMetadataOptions): Metadata {
   const socialDescription = ogDescription || truncatedDescription;
 
   const canonicalUrl = `${SITE_CONFIG.url}${path}`;
+  // Use specific OG image if provided, otherwise fall back to dynamic OG image
   const ogImageUrl = ogImage
     ? `${SITE_CONFIG.url}/og/${ogImage}`
-    : `${SITE_CONFIG.url}/og/home.jpg`;
+    : `${SITE_CONFIG.url}/opengraph-image`;
 
   return {
     title,
