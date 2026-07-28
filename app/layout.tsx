@@ -49,8 +49,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const GA4 = process.env.NEXT_PUBLIC_GA4_ID;
-  const GTM = process.env.NEXT_PUBLIC_GTM_ID;
+  // Tag IDs are interpolated into inline scripts below, so only accept
+  // well-formed values — a stray quote/newline in an env var would otherwise
+  // produce a SyntaxError that breaks every page.
+  const sanitizeTagId = (value: string | undefined, prefix: string) => {
+    const trimmed = value?.trim();
+    return trimmed && new RegExp(`^${prefix}-[A-Za-z0-9_-]+$`).test(trimmed)
+      ? trimmed
+      : undefined;
+  };
+  const GA4 = sanitizeTagId(process.env.NEXT_PUBLIC_GA4_ID, 'G');
+  const GTM = sanitizeTagId(process.env.NEXT_PUBLIC_GTM_ID, 'GTM');
 
   return (
     <html lang="en">
