@@ -360,11 +360,17 @@ export default function CreditAppAdmin() {
                 </p>
               </div>
               <div className="flex items-center gap-3 print:hidden">
-                <button
-                  onClick={() => window.print()}
+                <a
+                  href={`/api/admin/credit-applications/pdf?id=${selectedApp.id}`}
                   className="bg-[--penley-green] text-white px-4 py-2 rounded-md font-semibold hover:bg-[--penley-green-dark] text-sm"
                 >
-                  🖨️ Print / Save PDF
+                  📄 Download PDF
+                </a>
+                <button
+                  onClick={() => window.print()}
+                  className="bg-gray-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-gray-700 text-sm"
+                >
+                  🖨️ Print
                 </button>
                 <button
                   onClick={() => setSelectedApp(null)}
