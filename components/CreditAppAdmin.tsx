@@ -3,6 +3,33 @@
 import { useState, useEffect } from 'react';
 import type { CreditApplication } from '@/lib/credit-app-schema';
 
+const FILE_LABELS: Record<string, string> = {
+  w9: 'W-9',
+  taxExemptionCert: 'Tax Exemption Certificate',
+  coi: 'Certificate of Insurance',
+};
+
+// files is stored as { w9: path, coi: path, otherDocs: '["path1","path2"]' }
+function getFileEntries(files: any): { label: string; path: string }[] {
+  const entries: { label: string; path: string }[] = [];
+  for (const [key, value] of Object.entries(files || {})) {
+    if (key === 'otherDocs') {
+      let docs: string[] = [];
+      try {
+        docs = Array.isArray(value) ? value : JSON.parse(value as string);
+      } catch {
+        docs = [];
+      }
+      docs.forEach((path, i) =>
+        entries.push({ label: `Other Document #${i + 1}`, path })
+      );
+    } else if (typeof value === 'string' && value) {
+      entries.push({ label: FILE_LABELS[key] || key, path: value });
+    }
+  }
+  return entries;
+}
+
 interface CreditApplicationRow {
   id: string;
   company_name: string;
@@ -322,16 +349,30 @@ export default function CreditAppAdmin() {
 
       {/* Detail Modal */}
       {selectedApp && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="print-modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="print-area bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
-              <h2 className="text-2xl font-bold">{selectedApp.company_name}</h2>
-              <button
-                onClick={() => setSelectedApp(null)}
-                className="text-gray-700 hover:text-gray-700 text-2xl"
-              >
-                ×
-              </button>
+              <div>
+                <h2 className="text-2xl font-bold">{selectedApp.company_name}</h2>
+                <p className="hidden print:block text-sm text-gray-600">
+                  Penley Oil Company — Credit Application — Submitted{' '}
+                  {new Date(selectedApp.submitted_at).toLocaleDateString()}
+                </p>
+              </div>
+              <div className="flex items-center gap-3 print:hidden">
+                <button
+                  onClick={() => window.print()}
+                  className="bg-[--penley-green] text-white px-4 py-2 rounded-md font-semibold hover:bg-[--penley-green-dark] text-sm"
+                >
+                  🖨️ Print / Save PDF
+                </button>
+                <button
+                  onClick={() => setSelectedApp(null)}
+                  className="text-gray-700 hover:text-gray-700 text-2xl"
+                >
+                  ×
+                </button>
+              </div>
             </div>
 
             <div className="p-6 space-y-6">
@@ -562,13 +603,24 @@ export default function CreditAppAdmin() {
                 <div>
                   <h3 className="font-bold text-lg mb-2 text-black">Uploaded Files</h3>
                   <div className="space-y-2 text-sm">
-                    {Object.entries(selectedApp.files).map(([key, value]) => (
-                      <div key={key} className="flex items-center gap-2">
-                        <span className="font-medium">{key}:</span>
-                        <span className="text-blue-600">{value as string}</span>
+                    {getFileEntries(selectedApp.files).map(({ label, path }) => (
+                      <div key={path} className="flex items-center gap-2">
+                        <span className="font-medium text-black">{label}:</span>
+                        <a
+                          href={`/api/admin/credit-applications/download?path=${encodeURIComponent(path)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline hover:text-blue-800"
+                        >
+                          Download ↓
+                        </a>
+                        <span className="text-gray-500 text-xs print:hidden">{path}</span>
                       </div>
                     ))}
                   </div>
+                  <p className="text-xs text-gray-500 mt-2 print:hidden">
+                    Tip: open each file and print it, or use your browser&apos;s print dialog to save as PDF.
+                  </p>
                 </div>
               )}
             </div>
