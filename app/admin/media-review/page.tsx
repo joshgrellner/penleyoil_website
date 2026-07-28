@@ -63,14 +63,22 @@ export default function MediaReviewPage() {
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    // Simple password gate - in production use proper auth
-    const savedAccess = sessionStorage.getItem('mediaReviewAccess');
-    if (savedAccess === 'granted') {
-      setHasAccess(true);
-      loadData();
-    } else {
+    // Session is validated server-side via httpOnly cookie
+    const checkSession = async () => {
+      try {
+        const response = await fetch('/api/admin/login');
+        const result = await response.json();
+        if (result.authenticated) {
+          setHasAccess(true);
+          loadData();
+          return;
+        }
+      } catch (error) {
+        console.error('Session check error:', error);
+      }
       setLoading(false);
-    }
+    };
+    checkSession();
   }, []);
 
   const loadData = async () => {
@@ -93,14 +101,24 @@ export default function MediaReviewPage() {
     }
   };
 
-  const handleLogin = () => {
-    // Simple password check - replace with proper auth
-    if (password === 'penley2025' || password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
-      sessionStorage.setItem('mediaReviewAccess', 'granted');
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+
+      if (!response.ok) {
+        alert('Incorrect password');
+        return;
+      }
+
       setHasAccess(true);
       loadData();
-    } else {
-      alert('Incorrect password');
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Login failed. Please try again.');
     }
   };
 

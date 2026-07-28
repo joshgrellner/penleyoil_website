@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase';
+import { ADMIN_SESSION_COOKIE, verifySessionToken } from '@/lib/admin-auth';
+
+function isAuthenticated(request: NextRequest): boolean {
+  return verifySessionToken(request.cookies.get(ADMIN_SESSION_COOKIE)?.value);
+}
 
 export async function GET(request: NextRequest) {
-  // Simple auth check (in production, use proper session-based auth)
-  const authHeader = request.headers.get('authorization');
-  const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
-
-  if (!authHeader || authHeader !== `Bearer ${adminPassword}`) {
+  if (!isAuthenticated(request)) {
     return NextResponse.json(
       { success: false, error: 'Unauthorized' },
       { status: 401 }
@@ -42,10 +43,7 @@ export async function GET(request: NextRequest) {
 
 // Update application status
 export async function PATCH(request: NextRequest) {
-  const authHeader = request.headers.get('authorization');
-  const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
-
-  if (!authHeader || authHeader !== `Bearer ${adminPassword}`) {
+  if (!isAuthenticated(request)) {
     return NextResponse.json(
       { success: false, error: 'Unauthorized' },
       { status: 401 }
