@@ -22,38 +22,68 @@ export default function CreditAppAdmin() {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Simple password protection
-  const handleLogin = () => {
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'penley-admin-2025';
-    if (password === adminPassword) {
+  // Password is verified server-side; the session lives in an httpOnly cookie
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+
+      if (!response.ok) {
+        alert('Incorrect password');
+        return;
+      }
+
+      setPassword('');
       setIsAuthenticated(true);
-      sessionStorage.setItem('admin-auth', 'true');
       fetchApplications();
-    } else {
-      alert('Incorrect password');
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Login failed. Please try again.');
     }
   };
 
-  useEffect(() => {
-    const isAuth = sessionStorage.getItem('admin-auth') === 'true';
-    if (isAuth) {
-      setIsAuthenticated(true);
-      fetchApplications();
-    } else {
-      setLoading(false);
+  const handleLogout = async () => {
+    try {
+      await fetch('/api/admin/login', { method: 'DELETE' });
+    } catch (error) {
+      console.error('Logout error:', error);
     }
+    setIsAuthenticated(false);
+    setApplications([]);
+    setSelectedApp(null);
+  };
+
+  useEffect(() => {
+    const checkSession = async () => {
+      try {
+        const response = await fetch('/api/admin/login');
+        const result = await response.json();
+        if (result.authenticated) {
+          setIsAuthenticated(true);
+          fetchApplications();
+          return;
+        }
+      } catch (error) {
+        console.error('Session check error:', error);
+      }
+      setLoading(false);
+    };
+    checkSession();
   }, []);
 
   const fetchApplications = async () => {
     setLoading(true);
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'penley-admin-2025';
-
     try {
-      const response = await fetch('/api/admin/credit-applications', {
-        headers: {
-          'Authorization': `Bearer ${adminPassword}`,
-        },
-      });
+      const response = await fetch('/api/admin/credit-applications');
+
+      if (response.status === 401) {
+        setIsAuthenticated(false);
+        setLoading(false);
+        return;
+      }
 
       if (!response.ok) {
         throw new Error('Failed to fetch applications');
@@ -69,13 +99,10 @@ export default function CreditAppAdmin() {
   };
 
   const updateStatus = async (id: string, newStatus: string) => {
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'penley-admin-2025';
-
     try {
       const response = await fetch('/api/admin/credit-applications', {
         method: 'PATCH',
         headers: {
-          'Authorization': `Bearer ${adminPassword}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ id, status: newStatus }),
@@ -96,13 +123,10 @@ export default function CreditAppAdmin() {
   };
 
   const updateNotes = async (id: string, notes: string) => {
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'penley-admin-2025';
-
     try {
       const response = await fetch('/api/admin/credit-applications', {
         method: 'PATCH',
         headers: {
-          'Authorization': `Bearer ${adminPassword}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ id, internal_notes: notes }),
@@ -212,6 +236,12 @@ export default function CreditAppAdmin() {
               className="bg-gray-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-gray-700"
             >
               🔄 Refresh
+            </button>
+            <button
+              onClick={handleLogout}
+              className="bg-gray-200 text-gray-700 px-6 py-2 rounded-md font-semibold hover:bg-gray-300"
+            >
+              Logout
             </button>
           </div>
         </div>
